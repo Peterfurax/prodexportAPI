@@ -1,0 +1,29 @@
+<!DOCTYPE doc SYSTEM "/SysConfig/Rules/LEC_Redaction_Article.dtd">
+<?EM-dtdExt /SysConfig/Rules/common.dtx?>
+<?EM-templateName /SysConfig/LesEchos/HorsPage/Templates/Article_swing.xml?>
+<?xml-stylesheet type="text/css" href="/SysConfig/Rules/LesEchos/base.css"?>
+<doc version-echos="ech-print-2012" xml:lang="fr"><article><titre id="RKUiYP7Jt1kgzZf7LeRgLFP"><titre-p>L'application Klassroom veut dématérialiser le cahier de liaison à l'école</titre-p>
+</titre>
+<chapeau id="RIgHAKmwF12lQP8mBUjfkBN"><chapeau-p>+ VIDEO - Pour remédier au système archaïque du cahier de liaison, Klassroom met à la disposition des enseignants une application. </chapeau-p>
+</chapeau>
+<texte id="RMQMrjfwCgz4iidjzgD7CVJ"><composant-signature><signature>					Neïla Beyler				</signature><twitter></twitter>
+<contributeur><?EM-dummyText Envoyé spécial - Correspondant?>
+</contributeur>
+</composant-signature>
+<photo-groupe class="PhotoGauche" fileType="PHO" style="" type="image" typeImage="IMG"><fg-photo class="xsm-blockstyle-align-center" dtxInsert="Photo, crédit, légende" fileref="/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1206363825/graphiques/image_03.0.1207155898_.JPEG" id="U22703433423Vey" tmx="5568 3712 1000 3712" xtransform="matrix(1, 0, 0, 1, 0, 0)"></fg-photo>
+<photo-legende id="U56416772630Num"><p>L’application Klassroom cible les classes maternelles et primaires.</p>
+<credit-web>AFP</credit-web>
+</photo-legende>
+</photo-groupe>
+<p>Du cahier de liaison qui tombe en lambeau à la fin de l'année au manque d'échanges entre parents et professeurs, l'application Klassroom veut dépoussiérer la communication à l'école.</p>
+<p>Reposant sur un modèle freemium (gratuit pour les professeurs et les parents - sauf la version mobile pour ces derniers),  3.500 professeurs en France et à l'étranger utilisent l’outil. Semblable à un réseau social, mais à l’échelle d’une classe, les enseignants peuvent poster des photos et des vidéos, et les parents signaler une absence ou demander un rendez-vous (ils peuvent aussi communiquer entre eux si le professeur choisit l’option).</p>
+<p>Une levée de fonds de 500.000 euros réalisée en début d’année va permettre à la start-up de s’attaquer en février à quelques marchés de l’hémisphère sud - Australie, Mexique, Colombie et Argentine - pour être présent dès leur rentrée. </p>
+<intertitre>Les explications de Frank-David Cohen, cofondateur de Klassroom</intertitre>
+<scriptblock id="U86443087580vbx"><![CDATA[ &lt;center&gt;&lt;iframe src="//www.ultimedia.com/deliver/generic/iframe/mdtk/01870326/zone/1/showtitle/1/src/vrlpxs" width="100%" height="353" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" hspace="0" vspace="0" style="z-index:1;" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true"&gt;&lt;/iframe&gt;&lt;/center&gt; ]]></scriptblock>
+<intertitre><?EM-dummyText intertitre ?>
+</intertitre>
+<p><?EM-dummyText texte texte texte texte texte ?>
+</p>
+</texte>
+</article>
+</doc>

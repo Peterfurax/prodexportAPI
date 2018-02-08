@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Metadata
+  SYSTEM "/SysConfig/Classify/classify-image.dtd">
+<Metadata><General>
+<DocTitle>1000X800 STRATO 1.jpg</DocTitle>
+<DateCreated>20171211132951</DateCreated>
+<DocAuthor>mlorcet</DocAuthor>
+<DocType>Image</DocType>
+</General><Customer><ExportWeb>OUI</ExportWeb><Comment/><CustomCredit/><CustomCaption/>
+<TypologieEchos/>
+<TypologieWeb>PHO</TypologieWeb>
+
+<Comment/>
+<CustomCredit/>
+<CustomCaption/>
+<Web><WebObjId>0301222980534</WebObjId>
+
+<WebType/>
+<WebPriority/>
+<WebPublicationDate>20180131081933</WebPublicationDate>
+<WebRelegationDate>20180501071841</WebRelegationDate>
+<WebUnpublicationDate>20180522071841</WebUnpublicationDate>
+<WebDeletionDate>20180522071841</WebDeletionDate>
+</Web>
+<Internal>
+<AConserver>NON</AConserver>
+</Internal>
+</Customer><iptc>
+<date_created>20171211</date_created>
+<time_created>132951</time_created>
+<digital_creation_date>20171211</digital_creation_date>
+</iptc><ImageInfo>
+<GuideLine>1000px x 800px
+								</GuideLine>
+<Orientation>Paysage</Orientation>
+<Resolution>5000.0px x 5000.0px</Resolution>
+<ImageType>JPEG</ImageType>
+<Couleurs>RGB</Couleurs>
+</ImageInfo><PubData>
+<Paper>
+<Produit/>
+<DatePub>20180131083241</DatePub>
+<Edition/>
+<Section/>
+<Folio/>
+<Position/>
+<Format/>
+<Page/>
+<PagePDF/>
+</Paper>
+<Web><WebObjId>0301222980534</WebObjId>
+<ProduitW/>
+<PageW/>
+<WebType/>
+<DatePubW/>
+</Web>
+</PubData></Metadata>

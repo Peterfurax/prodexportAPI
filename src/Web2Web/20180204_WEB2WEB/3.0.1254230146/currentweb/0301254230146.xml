@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Publishing
+  SYSTEM "lepechos.dtd">
+<Publishing>
+   <Operation>LiveUpdate</Operation>
+   <Document>
+      <Code>0301254230146</Code>
+      <DocumentNature>TXT</DocumentNature>
+      <DataType>ARTICLE_LIVE</DataType>
+      <Metadata>
+         <AdministrativeMetadata>
+            <Provider>LesEchos</Provider>
+            <Creator>LesEchos</Creator>
+            <Source>LesEchos</Source>
+         </AdministrativeMetadata>
+         <AnteriorityMetadata>
+            <Media/>
+            <MediaLabel/>
+            <Segment/>
+            <SousSegment/>
+            <Theme/>
+            <SousTheme/>
+            <PublicationDate>
+               <ISO>2018-02-05T17:12:05+0100</ISO>
+            </PublicationDate>
+            <IssueNumber/>
+            <PageNumber/>
+            <SequenceNumber/>
+            <NextPageNumber/>
+         </AnteriorityMetadata>
+         <DescriptiveMetadata>
+            <Authors>
+               <Author>
+                  <Name>LES ECHOS</Name>
+                  <EMail/>
+               </Author>
+            </Authors>
+            <Companies>
+               <CompanySubject>
+                  <Name/>
+                  <CompanyList/>
+               </CompanySubject>
+            </Companies>
+            <Geographies>
+               <Geography/>
+            </Geographies>
+            <Keywords>
+               <Keyword/>
+            </Keywords>
+            <Biographies>
+               <Biography/>
+            </Biographies>
+            <Language>FR</Language>
+            <Abstract>L&apos;Autorité des marchés financiers (AMF) fait savoir que Safran était en mesure de détenir 233.664.224 actions Zodiac Aerospace, représentant au moins 71,87% des droits de vote de cette société, selon le résultat provisoire de l&apos;offre publique d&apos;achat à titre principal, assortie à titre subsidiaire d&apos;une offre publique d&apos;échange.</Abstract>
+            <Field name="en-direct">NON</Field>
+            <Field name="external-live-link"/>
+         </DescriptiveMetadata>
+         <ManagementMetadata>
+            <Categories>
+               <Category>
+                  <Source>rel</Source>
+                  <Segment>live</Segment>
+                  <SegmentLabel>Live</SegmentLabel>
+                  <SousSegment/>
+                  <SousSegmentLabel/>
+                  <Theme>actu</Theme>
+                  <ThemeLabel>Actualité</ThemeLabel>
+                  <SousTheme/>
+                  <SousThemeLabel/>
+               </Category>
+            </Categories>
+            <Subject>Safran réussit son OPA sur Zodiac</Subject>
+            <CreationDate>2018-02-05T17:12:05+0100</CreationDate>
+            <UpdateDate>2018-02-05T18:03:50+0100</UpdateDate>
+            <VersionDate>05/02/2018</VersionDate>
+            <VersionTime>18:03:50</VersionTime>
+            <PublicationDate>
+               <ISO>2018-02-05T17:12:05+0100</ISO>
+            </PublicationDate>
+            <RelegationDate>2018-05-06T16:12:05+0100</RelegationDate>
+            <UnPublicationDate>2018-05-27T16:12:05+0100</UnPublicationDate>
+            <DeletionDate>2018-05-27T16:12:05+0100</DeletionDate>
+            <PriorityLevel>3</PriorityLevel>
+            <WordCount>61</WordCount>
+            <LineCount>7</LineCount>
+            <SignCount>363</SignCount>
+            <ForeseenCount/>
+         </ManagementMetadata>
+         <RightsMetadata>
+            <Copyright>
+               <CopyrightHolder>Les Echos</CopyrightHolder>
+               <CopyrightDate>2018</CopyrightDate>
+            </Copyright>
+            <UsageRights>
+               <UsageRight>
+                  <Recipient/>
+                  <UsageType/>
+                  <Geography>France</Geography>
+                  <RightsHolder>Les Echos</RightsHolder>
+                  <StartDate/>
+                  <EndDate/>
+                  <Limitations>Tous droits réservés (2018) LES ECHOS - Toutes les informations reproduites dans ce fichier sont protégées par les droits de propriété intellectuelle détenus par LES ECHOS. Aucune de ces informations ne peut être reproduite, modifiée, exploitée ou réutilisée de quelque manière que ce soit sans l&apos;accord préalable écrit des ECHOS</Limitations>
+               </UsageRight>
+            </UsageRights>
+            <ConfidentialityLevel/>
+         </RightsMetadata>
+      </Metadata>
+      <Data>
+         <Introduction>
+            <Headline>Safran réussit son OPA sur Zodiac</Headline>
+            <Byline/>
+            <Heading>
+               <Head/>
+               <Info1/>
+               <Info2/>
+               <Info3/>
+               <Info4/>
+               <Info5/>
+               <Info6/>
+            </Heading>
+            <Notes/>
+         </Introduction>
+         <Sections>
+            <Section>
+               <Text>L&apos;Autorité des marchés financiers (AMF) fait savoir que Safran était en mesure de détenir 233.664.224 actions Zodiac Aerospace, représentant au moins 71,87% des droits de vote de cette société, selon le résultat provisoire de l&apos;offre publique d&apos;achat à titre principal, assortie à titre subsidiaire d&apos;une offre publique d&apos;échange.</Text>
+            </Section>
+         </Sections>
+      </Data>
+   </Document>
+</Publishing>

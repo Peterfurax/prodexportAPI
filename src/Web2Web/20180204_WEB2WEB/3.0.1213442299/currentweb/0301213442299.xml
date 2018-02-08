@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Publishing
+  SYSTEM "lepechos.dtd">
+<Publishing>
+   <Operation>LiveUpdate</Operation>
+   <Document>
+      <Code>0301213442299</Code>
+      <DocumentNature>TXT</DocumentNature>
+      <DataType>ARTICLE</DataType>
+      <Metadata>
+         <AdministrativeMetadata>
+            <Provider>LesEchos</Provider>
+            <Creator>LesEchos</Creator>
+            <Source>LesEchos</Source>
+         </AdministrativeMetadata>
+         <AnteriorityMetadata>
+            <Media/>
+            <MediaLabel/>
+            <Segment/>
+            <SousSegment/>
+            <Theme/>
+            <SousTheme/>
+            <PublicationDate>
+               <ISO>2018-01-31T07:15:56+0100</ISO>
+            </PublicationDate>
+            <IssueNumber/>
+            <PageNumber/>
+            <SequenceNumber/>
+            <NextPageNumber/>
+         </AnteriorityMetadata>
+         <DescriptiveMetadata>
+            <Authors>
+               <Author>
+                  <Name>JULIE LE BOLZER</Name>
+                  <EMail/>
+               </Author>
+            </Authors>
+            <Companies>
+               <CompanySubject>
+                  <Name/>
+                  <CompanyList/>
+               </CompanySubject>
+            </Companies>
+            <Geographies>
+               <Geography/>
+            </Geographies>
+            <Keywords>
+               <Keyword/>
+            </Keywords>
+            <Biographies>
+               <Biography/>
+            </Biographies>
+            <Language>FR</Language>
+            <Abstract>En 2017, les sites spécialisés ont enregistré une forte augmentation des offres d&apos;emplois. Et le phénomène ne serait pas près de se terminer.</Abstract>
+            <Field name="semantic">
+               <Field name="categorization">
+                  <Field name="iptc">
+                     <Field name="display-name">Industrie de transport</Field>
+                     <Field name="iptc-name">Industrie de transport</Field>
+                     <Field name="iptc-media">medtop:20000337</Field>
+                     <Field name="iptc-subject">subj:04015000</Field>
+                     <Field name="iptc-media-parent">medtop:04000000</Field>
+                  </Field>
+                  <Field name="iptc">
+                     <Field name="display-name">Emploi</Field>
+                     <Field name="iptc-name">Emploi</Field>
+                     <Field name="iptc-media">medtop:20000509</Field>
+                     <Field name="iptc-subject">subj:09003000</Field>
+                  </Field>
+               </Field>
+               <Field name="people">
+                  <Field name="person">
+                     <Field name="display-name">David Beaurepaire</Field>
+                     <Field name="name">David Beaurepaire</Field>
+                  </Field>
+                  <Field name="person">
+                     <Field name="display-name">Julien André</Field>
+                     <Field name="name">Julien André</Field>
+                  </Field>
+               </Field>
+               <Field name="locations">
+                  <Field name="place">
+                     <Field name="display-name">Rennes (France)</Field>
+                     <Field name="name">Rennes</Field>
+                     <Field name="id">2983990</Field>
+                     <Field name="long">-1.67429</Field>
+                     <Field name="lat">48.112</Field>
+                     <Field name="continent-id">6255148</Field>
+                     <Field name="country-id">3017382</Field>
+                     <Field name="admindiv1-id">3030293</Field>
+                     <Field name="admindiv2-id">3012849</Field>
+                     <Field name="admindiv3-id">2983989</Field>
+                  </Field>
+                  <Field name="place">
+                     <Field name="display-name">Paris (France)</Field>
+                     <Field name="name">Paris</Field>
+                     <Field name="id">2988507</Field>
+                     <Field name="long">2.3488</Field>
+                     <Field name="lat">48.8534</Field>
+                     <Field name="continent-id">6255148</Field>
+                     <Field name="country-id">3017382</Field>
+                     <Field name="admindiv1-id">3012874</Field>
+                     <Field name="admindiv2-id">2968815</Field>
+                     <Field name="admindiv3-id">2988506</Field>
+                  </Field>
+                  <Field name="place">
+                     <Field name="display-name">Bordeaux (France)</Field>
+                     <Field name="name">Bordeaux</Field>
+                     <Field name="id">3031582</Field>
+                     <Field name="long">-0.5805</Field>
+                     <Field name="lat">44.8404</Field>
+                     <Field name="continent-id">6255148</Field>
+                     <Field name="country-id">3017382</Field>
+                     <Field name="admindiv1-id">3037350</Field>
+                     <Field name="admindiv2-id">3015948</Field>
+                     <Field name="admindiv3-id">3031580</Field>
+                  </Field>
+                  <Field name="place">
+                     <Field name="display-name">Toulouse (France)</Field>
+                     <Field name="name">Toulouse</Field>
+                     <Field name="id">2972315</Field>
+                     <Field name="long">1.44367</Field>
+                     <Field name="lat">43.6043</Field>
+                     <Field name="continent-id">6255148</Field>
+                     <Field name="country-id">3017382</Field>
+                     <Field name="admindiv1-id">2993955</Field>
+                     <Field name="admindiv2-id">3013767</Field>
+                     <Field name="admindiv3-id">2972314</Field>
+                  </Field>
+                  <Field name="place">
+                     <Field name="display-name">Strasbourg (France)</Field>
+                     <Field name="name">Strasbourg</Field>
+                     <Field name="id">2973783</Field>
+                     <Field name="long">7.74296</Field>
+                     <Field name="lat">48.5834</Field>
+                     <Field name="continent-id">6255148</Field>
+                     <Field name="country-id">3017382</Field>
+                     <Field name="admindiv1-id">3038033</Field>
+                     <Field name="admindiv2-id">3034720</Field>
+                     <Field name="admindiv3-id">2973781</Field>
+                  </Field>
+               </Field>
+            </Field>
+            <Field name="similarity">
+               <Field name="similar-documents">
+                  <Field name="document">
+                     <Field name="title">SNCF Réseau recrute 2.800 professionnels du rail</Field>
+                     <Field name="display-name">[08/01/2018] SNCF Réseau recrute 2.800 professionnels du rail</Field>
+                     <Field name="sdv-key">0301082955264</Field>
+                  </Field>
+                  <Field name="document">
+                     <Field name="title">Top 10 des recruteurs de la diversité : les résultats</Field>
+                     <Field name="display-name">[27/11/2017] Top 10 des recruteurs de la diversité : les résultats</Field>
+                     <Field name="sdv-key">030928742244</Field>
+                  </Field>
+                  <Field name="document">
+                     <Field name="title">Recrutement de managers : un marché très disputé</Field>
+                     <Field name="display-name">[13/11/2017] Recrutement de managers : un marché très disputé</Field>
+                     <Field name="sdv-key">030851875345</Field>
+                  </Field>
+                  <Field name="document">
+                     <Field name="title">La flexisécurité, joker des agences d&apos;intérim</Field>
+                     <Field name="display-name">[13/11/2017] La flexisécurité, joker des agences d&apos;intérim</Field>
+                     <Field name="sdv-key">030845590626</Field>
+                  </Field>
+                  <Field name="document">
+                     <Field name="title">Quatre conseils pour séduire les robots</Field>
+                     <Field name="display-name">[13/11/2017] Quatre conseils pour séduire les robots</Field>
+                     <Field name="sdv-key">030832293690</Field>
+                  </Field>
+               </Field>
+            </Field>
+         </DescriptiveMetadata>
+         <ManagementMetadata>
+            <Categories>
+               <Category>
+                  <Source>relb</Source>
+                  <Segment>directions_ressources_humaines</Segment>
+                  <SegmentLabel>Directions ressources humaines</SegmentLabel>
+                  <SousSegment>recrutement</SousSegment>
+                  <SousSegmentLabel>Recrutement</SousSegmentLabel>
+                  <Theme>tendance</Theme>
+                  <ThemeLabel>Tendance</ThemeLabel>
+                  <SousTheme/>
+                  <SousThemeLabel/>
+               </Category>
+            </Categories>
+            <Subject>Emplois : les propositions affluent sur les job boards</Subject>
+            <CreationDate>2018-01-31T07:15:56+0100</CreationDate>
+            <UpdateDate>2018-01-31T07:14:12+0100</UpdateDate>
+            <VersionDate>31/01/2018</VersionDate>
+            <VersionTime>07:14:12</VersionTime>
+            <PublicationDate>
+               <ISO>2018-01-31T07:15:56+0100</ISO>
+            </PublicationDate>
+            <RelegationDate>2018-04-26T18:58:56+0100</RelegationDate>
+            <UnPublicationDate>2018-05-17T18:58:56+0100</UnPublicationDate>
+            <DeletionDate>2018-05-17T18:58:56+0100</DeletionDate>
+            <PriorityLevel>3</PriorityLevel>
+            <WordCount>513</WordCount>
+            <LineCount>58</LineCount>
+            <SignCount>3440</SignCount>
+            <ForeseenCount/>
+         </ManagementMetadata>
+         <RightsMetadata>
+            <Copyright>
+               <CopyrightHolder>Les Echos</CopyrightHolder>
+               <CopyrightDate>2018</CopyrightDate>
+            </Copyright>
+            <UsageRights>
+               <UsageRight>
+                  <Recipient/>
+                  <UsageType/>
+                  <Geography>France</Geography>
+                  <RightsHolder>Les Echos</RightsHolder>
+                  <StartDate/>
+                  <EndDate/>
+                  <Limitations>Tous droits réservés (2018) LES ECHOS - Toutes les informations reproduites dans ce fichier sont protégées par les droits de propriété intellectuelle détenus par LES ECHOS. Aucune de ces informations ne peut être reproduite, modifiée, exploitée ou réutilisée de quelque manière que ce soit sans l&apos;accord préalable écrit des ECHOS</Limitations>
+               </UsageRight>
+            </UsageRights>
+            <ConfidentialityLevel/>
+         </RightsMetadata>
+      </Metadata>
+      <Data>
+         <Introduction>
+            <Headline>Emplois : les propositions affluent sur les job boards</Headline>
+            <Byline/>
+            <Heading>
+               <Head>En 2017, les sites spécialisés ont enregistré une forte augmentation des offres d&apos;emplois. Et le phénomène ne serait pas près de se terminer.</Head>
+               <Info1/>
+               <Info2/>
+               <Info3/>
+               <Info4/>
+               <Info5/>
+               <Info6/>
+            </Heading>
+            <Notes/>
+         </Introduction>
+         <Sections>
+            <Section>
+               <MultimediaInserts>
+                  <MultimediaInsert>
+                     <Reference>0301213458299</Reference>
+                     <Loid>3.0.1213458299</Loid>
+                     <FileFormat/>
+                     <FileType>PHO</FileType>
+                     <Caption>Les salariés auraient repris confiance et envisageraient plus facilement de postuler ailleurs, assurent les responsables de job boards.</Caption>
+                     <Copyright>Shutterstock</Copyright>
+                     <Placement>Left</Placement>
+                     <PixelWidth>1000</PixelWidth>
+                     <PixelHeight>533</PixelHeight>
+                     <Title>Les salariés auraient repris confiance et envisageraient plus facilement de postuler ailleurs, assurent les responsables de job boards.</Title>
+                     <Byline/>
+                     <Source/>
+                  </MultimediaInsert>
+               </MultimediaInserts>
+               <Text>Une croissance à deux chiffres ! Sur les <ExternalLink>
+                     <LinkText>sites internet spécialisés</LinkText>
+                     <URL>https://business.lesechos.fr/directions-marketing/commercial/developpement-commercial/030845742533-entreprises-et-job-boards-quelles-interactions-315612.php</URL>
+                  </ExternalLink>, le volume des offres d&apos;emplois a très fortement augmenté en 2017. <I>« La croissance était déjà de 15 % en 2016, mais elle est passée à 41 % en 2017</I>, observe David Beaurepaire, responsable de la stratégie et du développement du groupe RegionsJob. <I>Cette très forte accélération s&apos;est confirmée tout au long de l&apos;année pour atteindre au quatrième trimestre +53 % par rapport à la même période de l&apos;année précédente ! »</I>
+               </Text>
+            </Section>
+            <Section>
+               <SubTitle>Transports et logistique en tête</SubTitle>
+               <Text>Même tendance du côté du site de petites annonces Vivastreet. <I>« En 2017, ce sont 1,45 million d&apos;offres d&apos;emploi qui ont été publiées sur notre site, soit une hausse de 30 % par rapport à 2016</I>, indique Julien André, directeur du département emploi de Vivastreet.<I> Pour la sixième année consécutive, ces volumes ne cessent de croître »</I>.La recrudescence touche aussi les propositions d&apos;embauche en CDI. Celles-ci ont enregistré en 2017, selon le dernier baromètre de RegionsJob, une progression de 43 %. <I>« Et il s&apos;agit d&apos;une reprise pérenne : aujourd&apos;hui, 66 % des annonces diffusées sur notre site concernent des CDI, contre 11 % de CDD »</I>, précise David Beaurepaire. Contrairement à une idée reçue, l&apos;embellie ne concerne pas seulement les technologies de l&apos;information ou la high tech. Si ces domaines enregistrent tout de même 35 % d&apos;offres supplémentaires, leur performance reste en deçà d&apos;autres secteurs. Selon RegionsJob, les volumes d&apos;offres ont bondi de 96 % dans le transport et la logistique, de 60 % dans le BTP, de 58 % dans les services aux entreprises et de 54 % dans l&apos;immobilier. Les secteurs dont le nombre d&apos;offres progresse le moins sont la distribution (+26 %), l&apos;automobile (+24 %) et la banque-assurance (+17 %).</Text>
+            </Section>
+            <Section>
+               <SubTitle>Des indicateurs au beau fixe</SubTitle>
+               <Text>Les métiers de la vente et l&apos;industrie ont également bénéficié de l&apos;amélioration. <I>« Les commerciaux, techniciens commerciaux et vendeurs indépendants à domicile sont extrêmement recherchés », </I>constate Julien André. « <I>Dans l&apos;industrie, les recrutements concernent la conduite d&apos;engins, la mécanique ou la maintenance de site »</I>. La reprise pourrait se poursuivre dans les milieux industriels. <I>« En 2016 et 2017, les investissements industriels sont montés en puissance. Le secteur, maintenant équipé en machines, nécessite des hommes et des femmes pour les faire fonctionner. L&apos;industrie pourrait donc redevenir durablement créatrice d&apos;emplois, ce qui n&apos;était pas arrivé depuis dix ans »</I>, estime David Beaurepaire. Les carnets de commandes des entreprises sont pleins. Les salariés auraient repris confiance et envisageraient plus facilement de postuler ailleurs, assurent les responsables de job boards. Enfin, les métropoles de Paris, Bordeaux, Toulouse, Strasbourg, ou Rennes se font plus dynamiques.<I> « Tous les indicateurs sont au beau fixe. 2018 pourrait être une belle année pour l&apos;emploi »</I>, veut croire David Beaurepaire.</Text>
+            </Section>
+            <Section>
+               <Signature/>
+               <Contributor/>
+            </Section>
+         </Sections>
+      </Data>
+   </Document>
+</Publishing>

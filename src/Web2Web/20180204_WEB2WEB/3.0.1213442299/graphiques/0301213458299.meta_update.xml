@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Metadata
+  SYSTEM "/SysConfig/Classify/classify-image.dtd">
+<Metadata><General>
+<DocTitle>shutterstock_site emploi.jpg</DocTitle>
+<DateCreated>20180126</DateCreated>
+<DocAuthor>gdauvergne</DocAuthor>
+<DocType>Image</DocType>
+</General><Customer><ExportWeb>OUI</ExportWeb><Comment/><CustomCredit/><CustomCaption/>
+<TypologieEchos/>
+<TypologieWeb>PHO</TypologieWeb>
+
+<Comment/>
+<CustomCredit/>
+<CustomCaption/>
+<Web><WebObjId>0301213458299</WebObjId>
+
+<WebType/>
+<WebPriority/>
+<WebPublicationDate>20180131061556</WebPublicationDate>
+<WebRelegationDate>20180426175856</WebRelegationDate>
+<WebUnpublicationDate>20180517175856</WebUnpublicationDate>
+<WebDeletionDate>20180517175856</WebDeletionDate>
+</Web>
+<Internal>
+<AConserver>NON</AConserver>
+</Internal>
+</Customer><iptc/><ImageInfo>
+<GuideLine>1000px x 533px
+								</GuideLine>
+<Orientation>Paysage</Orientation>
+<Resolution>300.0px x 300.0px</Resolution>
+<ImageType>JPEG</ImageType>
+<Couleurs>RGB</Couleurs>
+</ImageInfo></Metadata>

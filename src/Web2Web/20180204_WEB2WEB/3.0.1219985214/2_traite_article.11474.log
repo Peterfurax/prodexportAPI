@@ -1,0 +1,211 @@
+Debut de $METH_ECHOS_EXPORTWEB/web2web/2_exporte_article.bash
+SERVEUR=economix.sdv.fr
+
+PHASE 1 # 12:50 / Generation du planexport bidon
+
+cmd : /methode/meth01/scripts/LES_ECHOS/common/xslt3.sh -s:/methode/meth01/scripts/LES_ECHOS/exportweb/web2web/simule_planexport.xml -o:/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/planexport.xml -xsl:/methode/meth01/scripts/LES_ECHOS/exportweb/web2web/simule_planexport.xsl aaaammjj=20180131 loid=3.0.1219985214
+
+PHASE 2 # 12:50 / Extraction prodarch...
+
+cmd : java prodarch.Prodarch -logl debug -conf /methode/meth01/scripts/LES_ECHOS/exportweb/conf/config_prodarch_WEB2WEB.xml -file /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/planexport.xml
+prodarch: logging to System.out
+     1  INFO prodarch : Prodarch 2.3.4.0 started at: 2018-01-31 12:50:07
+   140 DEBUG config : configuration loaded
+   171  INFO proc : mode: export
+   172 DEBUG config : opening source database ...
+   429  INFO config : repository name: meth01
+   429 DEBUG config : done
+   488 DEBUG proc : input file loaded
+   527  INFO proc : Issue date: "20180131"
+   527  INFO proc : channel: null
+   566 DEBUG sitecfgcache : using default siteConfig: /SysConfig/siteConfig.cfg
+  1905 DEBUG proc : pdf loid: 
+  1905 DEBUG proc :   content loid: 3.0.1219985214
+  1912 DEBUG proc : obj: name: le strato courchevel .xml, loid: 3.0.1219985214, type: EOM::CompoundStory
+  1950 DEBUG ai : selectSourceVersionAndFormat for: le strato courchevel .xml
+  1950 DEBUG ai : @== copy last version
+  1962 DEBUG ai : @============= path: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/prodarch
+  1962 DEBUG ai : @============= name: story_3.0.1219985214.xml
+  1962  INFO ai : le strato courchevel .xml : output path for export: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/prodarch/story_3.0.1219985214.xml
+  1967 DEBUG proc : export file path: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/prodarch/story_3.0.1219985214.xml for: /Production/SerieLimitee/Web/Articles/Beaute/le strato courchevel .xml
+  2009 DEBUG proc : process hyperlinks
+  2052 DEBUG ai : processing hyperlink: /Production/SerieLimitee/Web/Illustrations/Beaute/1000X533%20VUE%20STRATTO.jpg?uuid=89911fb4-0518-11e8-bf19-1dbe003e5157
+  2071 DEBUG ai : selectSourceVersionAndFormat for: 1000X533 VUE STRATTO.jpg
+  2076 DEBUG ai : @== copy version n.: 0
+  2083 DEBUG ai : @============= path: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques
+  2083 DEBUG ai : @============= name: image_03.0.1222966845_.JPEG
+  2083  INFO ai : 1000X533 VUE STRATTO.jpg : output path for export: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222966845_.JPEG
+  2084 DEBUG proc : export file path: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222966845_.JPEG for: /Production/SerieLimitee/Web/Illustrations/Beaute/1000X533 VUE STRATTO.jpg
+  2150 DEBUG ai : hyperlink url: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222966845_.JPEG
+  2151 DEBUG ai : processing hyperlink: /Production/SerieLimitee/Web/Illustrations/Beaute/STRATTO%20CHAMBRE%201000X800.jpg?uuid=a4f05a90-0518-11e8-bf19-1dbe003e5157
+  2164 DEBUG ai : selectSourceVersionAndFormat for: STRATTO CHAMBRE 1000X800.jpg
+  2167 DEBUG ai : @== copy version n.: 0
+  2170 DEBUG ai : @============= path: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques
+  2170 DEBUG ai : @============= name: image_03.0.1222971087_.JPEG
+  2170  INFO ai : STRATTO CHAMBRE 1000X800.jpg : output path for export: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222971087_.JPEG
+  2170 DEBUG proc : export file path: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222971087_.JPEG for: /Production/SerieLimitee/Web/Illustrations/Beaute/STRATTO CHAMBRE 1000X800.jpg
+  2212 DEBUG ai : hyperlink url: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222971087_.JPEG
+  2213 DEBUG ai : processing hyperlink: /Production/SerieLimitee/Web/Illustrations/Beaute/1000X800%20STRATO%201.jpg?uuid=981d6074-0518-11e8-bf19-1dbe003e5157
+  2226 DEBUG ai : selectSourceVersionAndFormat for: 1000X800 STRATO 1.jpg
+  2229 DEBUG ai : @== copy version n.: 0
+  2231 DEBUG ai : @============= path: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques
+  2231 DEBUG ai : @============= name: image_03.0.1222980534_.JPEG
+  2231  INFO ai : 1000X800 STRATO 1.jpg : output path for export: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222980534_.JPEG
+  2231 DEBUG proc : export file path: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222980534_.JPEG for: /Production/SerieLimitee/Web/Illustrations/Beaute/1000X800 STRATO 1.jpg
+  2268 DEBUG ai : hyperlink url: /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222980534_.JPEG
+  2269 DEBUG ai : processing hyperlink: http://www.hotelstrato.com/
+  2274 ERROR ai : process hyperlink: org.omg.CORBA.BAD_PARAM: Narrow failed  vmcid: 0x0  minor code: 0  completed: No
+  2300  INFO proc :     le strato courchevel .xml
+  2311  INFO prodarch : Prodarch ended at: 2018-01-31 12:50:09 elapsed time(sec.): 2.369
+On check une nouvelle fois le date de publication
+cmd : /methode/meth01/scripts/LES_ECHOS/common/xslt3.sh -s:/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/prodexport.xml -xsl:$METH_ECHOS_EXPORTWEB/web2web/estCeUnEmbargo.xsl loid=3.0.1219985214
+
+PHASE 3 # 12:50 / Nettoyage des articles
+
+cmd : /methode/meth01/scripts/LES_ECHOS/common/xslt3.sh -s:/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/prodexport.xml -xsl:/methode/meth01/scripts/LES_ECHOS/exportweb/web2web/2_prepare_articles.xsl
+
+PHASE 4 # 12:50 / Traitement du prodexport
+
+cmd : /methode/meth01/scripts/LES_ECHOS/common/xslt3.sh -s:/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/prodexport.xml -xsl:/methode/meth01/scripts/LES_ECHOS/exportweb/web2web/3_traite_prodexport.xsl -o:/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/articles-a-exporter.xml loid-article-a-traiter=3.0.1219985214 workflow-step=SLI-Articles/Web-BAP
+loid : 3.0.1219985214  sdv-key : 0301219985214  
+
+Traitement du visuel par multimedia_insert.xsl : /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222966845_.JPEG
+1 balise composant-signature non prise en charge
+Traitement du visuel par multimedia_insert.xsl : /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222971087_.JPEG
+Traitement du visuel par multimedia_insert.xsl : /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222980534_.JPEG
+prodarch/story_3.0.1219985214.xml  Article
+surtitre : 
+titre : /doc/article
+chapeau : /doc/article/chapeau[1]
+
+PHASE 5 # 12:50 / Generation des articles a exporter
+
+cmd : /methode/meth01/scripts/LES_ECHOS/common/xslt3.sh -s:/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/articles-a-exporter.xml -o:/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/objets-a-exporter.xml -xsl:/methode/meth01/scripts/LES_ECHOS/exportweb/web2web/4_update_metadatas.xsl workflow-step=SLI-Articles/Web-BAP 
+SDV-KEY VISUEL : 0301222966845
+SDV-KEY VISUEL : 0301222971087
+SDV-KEY VISUEL : 0301222980534
+
+PHASE 6 # 12:50 / Generation des XML a destination d'SDV
+
+cmd : /methode/meth01/scripts/LES_ECHOS/common/xslt3.sh -s:/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/objets-a-exporter.xml -xsl:/methode/meth01/scripts/LES_ECHOS/exportweb/web2web/5_finalisation_export.xsl workflow-step=SLI-Articles/Web-BAP 
+DESTINATION : WEB     /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/print2web/
+Pas d'envoi Live demande
+
+PHASE 7 # 12:50 / Generation du tar WEB_20180131125017_SDV.tar
+
+./
+./0301219985214.xml
+./0301222966845_doc.jpg
+./0301222966845_print.jpg
+./0301222966845_web.jpg
+./0301222966845_web_tete.jpg
+./0301222966845.xml
+./0301222971087_doc.jpg
+./0301222971087_print.jpg
+./0301222971087_web.jpg
+./0301222971087_web_tete.jpg
+./0301222971087.xml
+./0301222980534_doc.jpg
+./0301222980534_print.jpg
+./0301222980534_web.jpg
+./0301222980534_web_tete.jpg
+./0301222980534.xml
+
+PHASE 8 # 12:50 / Envoi du fichier WEB_20180131125017_SDV.tar.gz a SDV
+
+cmd : /methode/meth01/scripts/LES_ECHOS/common/envoi_FTP.pl -s economix.sdv.fr -u echo -p minoumol -f /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/WEB_20180131125017_SDV.tar.gz -r info_luxe -t
+envoi_FTP.pl DECEMBRE_2015
+-> Arguments de traitement reçus :
+   SERVEUR : economix.sdv.fr
+   USER    : echo
+   PASSWORD: minoumol
+   TAILLE  : 1
+   TRACE   : 0
+-> Teste la connexion à: economix.sdv.fr   OK.
+-> Teste le login      : (echo, minoumol)   OK.
+-> Répertoire RACINE distant: /
+	 ** INFO ** On se positionne: //info_luxe
+___OK___ Connexion établie...
+
+=============================
+-> Fichier à envoyer:
+   RACINE  : /
+   RDISTANT: info_luxe
+   RLOCAL  : /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/
+   FICHIER : WEB_20180131125017_SDV.tar.gz
+   Poids du fichier WEB_20180131125017_SDV.tar.gz à envoyer : <2922788> Un #=4096
+-> Répertoire distant: /info_luxe
+-> Répertoire local  : /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214
+   ftp->put WEB_20180131125017_SDV.tar.gz
+#########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+   ftp->dir WEB_20180131125017_SDV.tar.gz
+-> "-rw-rw-r--   1 echo     ftpasync  2922788 Jan 31 12:51 WEB_20180131125017_SDV.tar.gz"
+	 === -rw-rw-r--
+	 === 1
+	 === echo
+	 === ftpasync
+	 === 2922788 ===> trouvé 
+	 === Jan
+	 === 31
+	 === 12:51
+	 === WEB_20180131125017_SDV.tar.gz
+
+*****************************
+-> POIDS_ICI    = 2922788   
+-> POIDS_LA_BAS = 2922788
+*****************************
+   Transfert avec succès
+___SUCCES___
+retour EnvoiFichier: 0 taille=1
+-> Envoi d'un fichier taille: WEB_20180131125017_SDV.taille
+   ftp->put WEB_20180131125017_SDV.taille
+
+   Destruction du fichier taille en local :
+   WEB_20180131125017_SDV.taille
+=============================
+Début de l'envoi: mercredi 31 janvier 2018 - 12:50:17
+Fin   de l'envoi: mercredi 31 janvier 2018 - 12:50:18
+Fin de envoi_FTP.pl
+
+PHASE 9 # 12:50 / Generation du script de mise a jour des metadonnees dans Methode
+
+cmd : /methode/meth01/scripts/LES_ECHOS/common/xslt3.sh -s:/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/objets-a-exporter.xml -xsl:/methode/meth01/scripts/LES_ECHOS/exportweb/web2web/objets_a_mettre_a_jour.xsl -o:/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/script_maj_des_metadatas.bash loid-article-a-traiter=3.0.1219985214 date-export=20180131125006 workflow-step=SLI-Articles/Web-BAP
+
+PHASE 10 # 12:50 / Mise a jour des metadonnees
+
+/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/script_maj_des_metadatas.bash
+Scheduling action 'check_in' on '/Production/SerieLimitee/Web/Illustrations/Beaute/1000X533 VUE STRATTO.jpg'..., done.
+Appended ticket 6
+log4j:WARN No appenders could be found for logger (com.eidosmedia.emx.core.EmxURIFactory).
+log4j:WARN Please initialize the log4j system properly.
+Scheduling action 'check_in' on '/Production/SerieLimitee/Web/Illustrations/Beaute/STRATTO CHAMBRE 1000X800.jpg'..., done.
+Appended ticket 6
+log4j:WARN No appenders could be found for logger (com.eidosmedia.emx.core.EmxURIFactory).
+log4j:WARN Please initialize the log4j system properly.
+Scheduling action 'check_in' on '/Production/SerieLimitee/Web/Illustrations/Beaute/1000X800 STRATO 1.jpg'..., done.
+Appended ticket 6
+log4j:WARN No appenders could be found for logger (com.eidosmedia.emx.core.EmxURIFactory).
+log4j:WARN Please initialize the log4j system properly.
+Scheduling action 'check_in' on '/Production/SerieLimitee/Web/Articles/Beaute/le strato courchevel .xml'..., done.
+/Production/SerieLimitee/Web/Articles/Beaute/le strato courchevel .xml
+Appended ticket 19
+log4j:WARN No appenders could be found for logger (com.eidosmedia.emx.core.EmxURIFactory).
+log4j:WARN Please initialize the log4j system properly.
+
+PHASE 11 # 12:50 / Import dans la collection de similarite LUXID pour meth01
+
+log4j:WARN No appenders could be found for logger (com.lesechos.LECUtils).
+log4j:WARN Please initialize the log4j system properly.
+Extraction de l'article ï¿½ annoter
+Extraction de la typologie du document
+Nettoyage de l'article
+Ceci est un Test !
+Conversion au format TMX
+Envoie au plan d'annotation
+http://ch-eu-red-temis:8282/LuxidSolr/LesEchos-Collection-Similarite-2014
+Attente fin traitement echos Live
+Extraction de la cle print si papier webise
+cmd : /methode/meth01/scripts/LES_ECHOS/common/xslt3.sh -s:/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/articles-a-exporter.xml -xsl:/methode/meth01/scripts/LES_ECHOS/exportweb/web2web/correspondance_print_web.xsl loid-article-a-traiter=3.0.1219985214 workflow-step=SLI-Articles/Web-BAP
+
+PHASE 12 # 12:50 / Fin de traitement
+

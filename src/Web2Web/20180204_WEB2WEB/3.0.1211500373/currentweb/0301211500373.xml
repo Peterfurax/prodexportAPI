@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Publishing
+  SYSTEM "lepechos.dtd">
+<Publishing>
+   <Operation>LiveUpdate</Operation>
+   <Document>
+      <Code>0301211500373</Code>
+      <DocumentNature>TXT</DocumentNature>
+      <DataType>ARTICLE</DataType>
+      <Metadata>
+         <AdministrativeMetadata>
+            <Provider>LesEchos</Provider>
+            <Creator>LesEchos</Creator>
+            <Source>LesEchos</Source>
+         </AdministrativeMetadata>
+         <AnteriorityMetadata>
+            <Media/>
+            <MediaLabel/>
+            <Segment/>
+            <SousSegment/>
+            <Theme/>
+            <SousTheme/>
+            <PublicationDate>
+               <ISO>2018-01-31T19:00:02+0100</ISO>
+            </PublicationDate>
+            <IssueNumber/>
+            <PageNumber/>
+            <SequenceNumber/>
+            <NextPageNumber/>
+         </AnteriorityMetadata>
+         <DescriptiveMetadata>
+            <Authors>
+               <Author>
+                  <Name>FRANK NIEDERCORN</Name>
+                  <EMail/>
+               </Author>
+            </Authors>
+            <Companies>
+               <CompanySubject>
+                  <Name/>
+                  <CompanyList/>
+               </CompanySubject>
+            </Companies>
+            <Geographies>
+               <Geography/>
+            </Geographies>
+            <Keywords>
+               <Keyword/>
+            </Keywords>
+            <Biographies>
+               <Biography/>
+            </Biographies>
+            <Language>FR</Language>
+            <Abstract>La start-up de Pessac vient de présenter, aux Etats-Unis, le premier modèle total de peau humaine bio-imprimée en 3D. Elle vise le marché des laboratoires de cosmétiques soucieux de tester leurs nouveaux produits.</Abstract>
+            <Field name="semantic">
+               <Field name="categorization">
+                  <Field name="iptc">
+                     <Field name="display-name">Hygiène et Cosmétiques</Field>
+                     <Field name="iptc-name">Hygiène et Cosmétiques</Field>
+                     <Field name="iptc-media">medtop:20000220</Field>
+                     <Field name="iptc-subject">subj:04002003</Field>
+                     <Field name="iptc-media-parent">medtop:20000217</Field>
+                  </Field>
+               </Field>
+               <Field name="organizations">
+                  <Field name="organization">
+                     <Field name="display-name">Inserm</Field>
+                     <Field name="name">Inserm</Field>
+                  </Field>
+                  <Field name="organization">
+                     <Field name="id">14034</Field>
+                     <Field name="display-name">L&apos;Oréal</Field>
+                     <Field name="name">L&apos;Oréal</Field>
+                     <Field name="bloomberg-id">OR:FP</Field>
+                     <Field name="reuters-id">OREP.PA</Field>
+                     <Field name="instrument">
+                        <Field name="isin">FR0000120321</Field>
+                        <Field name="atos-id">1013541</Field>
+                     </Field>
+                  </Field>
+               </Field>
+               <Field name="people">
+                  <Field name="person">
+                     <Field name="display-name">Bruno Brisson</Field>
+                     <Field name="name">Bruno Brisson</Field>
+                  </Field>
+                  <Field name="person">
+                     <Field name="display-name">Fabien Guillemot</Field>
+                     <Field name="name">Fabien Guillemot</Field>
+                  </Field>
+               </Field>
+               <Field name="locations">
+                  <Field name="place">
+                     <Field name="display-name">Pessac (France)</Field>
+                     <Field name="name">Pessac</Field>
+                     <Field name="id">2987805</Field>
+                     <Field name="long">-0.64129</Field>
+                     <Field name="lat">44.8101</Field>
+                     <Field name="continent-id">6255148</Field>
+                     <Field name="country-id">3017382</Field>
+                     <Field name="admindiv1-id">3037350</Field>
+                     <Field name="admindiv2-id">3015948</Field>
+                     <Field name="admindiv3-id">3031580</Field>
+                  </Field>
+                  <Field name="place">
+                     <Field name="display-name">Etats-Unis</Field>
+                     <Field name="name">Etats-Unis</Field>
+                     <Field name="id">6252001</Field>
+                     <Field name="continent-id">6255149</Field>
+                  </Field>
+               </Field>
+            </Field>
+            <Field name="similarity">
+               <Field name="similar-documents">
+                  <Field name="document">
+                     <Field name="sdv-key">030983082021</Field>
+                     <Field name="display-name">[09/12/2017] Biologique Recherche</Field>
+                     <Field name="title">Biologique Recherche</Field>
+                  </Field>
+                  <Field name="document">
+                     <Field name="basis-key">00170-004-SLI</Field>
+                     <Field name="display-name">[07/12/2017] Biologique Recherche</Field>
+                     <Field name="title">Biologique Recherche</Field>
+                  </Field>
+                  <Field name="document">
+                     <Field name="basis-key">22209-513-ECH</Field>
+                     <Field name="display-name">[09/06/2016] Genoskin : un brevet pour conserver vivants des échantillons de peau humaine</Field>
+                     <Field name="title">Genoskin : un brevet pour conserver vivants des échantillons de peau humaine</Field>
+                  </Field>
+                  <Field name="document">
+                     <Field name="sdv-key">021820588820</Field>
+                     <Field name="display-name">[08/04/2016] La beauté sur mesure</Field>
+                     <Field name="title">La beauté sur mesure</Field>
+                  </Field>
+                  <Field name="document">
+                     <Field name="basis-key">22121-516-ECH</Field>
+                     <Field name="display-name">[03/02/2016] Portées par la foule, ces entreprises ont fait appel au financement participatif</Field>
+                     <Field name="title">Portées par la foule, ces entreprises ont fait appel au financement participatif</Field>
+                  </Field>
+               </Field>
+            </Field>
+         </DescriptiveMetadata>
+         <ManagementMetadata>
+            <Categories>
+               <Category>
+                  <Source>rew</Source>
+                  <Segment>innovateurs</Segment>
+                  <SegmentLabel>Innovateurs</SegmentLabel>
+                  <SousSegment/>
+                  <SousSegmentLabel/>
+                  <Theme>actu</Theme>
+                  <ThemeLabel>Actu info</ThemeLabel>
+                  <SousTheme/>
+                  <SousThemeLabel/>
+               </Category>
+            </Categories>
+            <Subject>Poietis commercialise la première peau humaine imprimée en 3D</Subject>
+            <CreationDate>2018-01-31T19:00:02+0100</CreationDate>
+            <UpdateDate>2018-01-31T18:59:13+0100</UpdateDate>
+            <VersionDate>31/01/2018</VersionDate>
+            <VersionTime>18:59:13</VersionTime>
+            <PublicationDate>
+               <ISO>2018-01-31T19:00:02+0100</ISO>
+            </PublicationDate>
+            <RelegationDate>2018-04-26T10:17:02+0100</RelegationDate>
+            <UnPublicationDate>2018-05-17T10:17:02+0100</UnPublicationDate>
+            <DeletionDate>2018-05-17T10:17:02+0100</DeletionDate>
+            <PriorityLevel>3</PriorityLevel>
+            <WordCount>458</WordCount>
+            <LineCount>50</LineCount>
+            <SignCount>2981</SignCount>
+            <ForeseenCount/>
+         </ManagementMetadata>
+         <RightsMetadata>
+            <Copyright>
+               <CopyrightHolder>Les Echos</CopyrightHolder>
+               <CopyrightDate>2018</CopyrightDate>
+            </Copyright>
+            <UsageRights>
+               <UsageRight>
+                  <Recipient/>
+                  <UsageType/>
+                  <Geography>France</Geography>
+                  <RightsHolder>Les Echos</RightsHolder>
+                  <StartDate/>
+                  <EndDate/>
+                  <Limitations>Tous droits réservés (2018) LES ECHOS - Toutes les informations reproduites dans ce fichier sont protégées par les droits de propriété intellectuelle détenus par LES ECHOS. Aucune de ces informations ne peut être reproduite, modifiée, exploitée ou réutilisée de quelque manière que ce soit sans l&apos;accord préalable écrit des ECHOS</Limitations>
+               </UsageRight>
+            </UsageRights>
+            <ConfidentialityLevel/>
+         </RightsMetadata>
+      </Metadata>
+      <Data>
+         <Introduction>
+            <Headline>Poietis commercialise la première peau humaine imprimée en 3D</Headline>
+            <Byline/>
+            <Heading>
+               <Head>La start-up de Pessac vient de présenter, aux Etats-Unis, le premier modèle total de peau humaine bio-imprimée en 3D. Elle vise le marché des laboratoires de cosmétiques soucieux de tester leurs nouveaux produits.</Head>
+               <Info1/>
+               <Info2/>
+               <Info3/>
+               <Info4/>
+               <Info5/>
+               <Info6/>
+            </Heading>
+            <Notes/>
+         </Introduction>
+         <Sections>
+            <Section>
+               <MultimediaInserts>
+                  <MultimediaInsert>
+                     <Reference>0301231533600</Reference>
+                     <Loid>3.0.1231533600</Loid>
+                     <FileFormat/>
+                     <FileType>PHO</FileType>
+                     <Caption>Fabriqué par bio-impression 3D, Poieskin est un modèle de peau totale humaine, très proche d&apos;un tissu natif avec sa structure faite de compartiments dermiques et épidermiques.</Caption>
+                     <Copyright>Poietis</Copyright>
+                     <Placement>Left</Placement>
+                     <PixelWidth>1431</PixelWidth>
+                     <PixelHeight>763</PixelHeight>
+                     <Title>Fabriqué par bio-impression 3D, Poieskin est un modèle de peau totale humaine, très proche d&apos;un tissu natif avec sa structure faite de compartiments dermiques et épidermiques.</Title>
+                     <Byline/>
+                     <Source/>
+                  </MultimediaInsert>
+               </MultimediaInserts>
+               <Text>A peine un demi-millimètre d&apos;épaisseur pour moins d&apos;un centimètre carré. Ce petit bout de tissu biologique, baptisé « Poieskin », est le tout premier modèle de peau humaine, réalisé par bio-impression 3D, qui soit commercialisé comme un produit. Basée à Pessac, la société Poietis vient de le présenter aux Etats-Unis lors d&apos;une conférence consacrée à la fabrication additive dans la santé. Après l&apos;industrie, l&apos;<ExternalLink>
+                     <LinkText>impression 3D pourrait bien aussi révolutionner la médecine</LinkText>
+                     <URL>https://www.lesechos.fr/15/12/2015/LesEchos/22087-050-ECH_l-impression-3d-s-implante-dans-la-sante.htm?texte=impression%203D%20niedercorn</URL>
+                  </ExternalLink>. Avec, d&apos;ici à quelques décennies, l&apos;impression d&apos;organes entiers.</Text>
+            </Section>
+            <Section>
+               <Text>Poietis a été fondé en 2014 par Fabien Guillemot, chercheur à l&apos;Inserm, et Bruno Brisson, entrepreneur dans les biotech, pour exploiter les résultats de cet institut de recherche publique. L&apos;entreprise a alors déposé de nouveaux brevets et fait le pari d&apos;améliorer la technologie pour mettre au point un procédé industriel. Certes, on savait déjà faire manuellement de petits bouts d&apos;épiderme en déposant à la pipette des cellules dans du collagène. Une approche toutefois artisanale et aux résultats aléatoires. Impossible de surcroît d&apos;obtenir un tissu identique et aussi complexe que la peau comprenant l&apos;épiderme en surface mais aussi le derme, ainsi qu&apos;une couche assurant la jonction entre les deux.</Text>
+            </Section>
+            <Section>
+               <SubTitle>Une peau générique et reproductible</SubTitle>
+               <Text>
+                  <I>« Poieskin est un modèle de peau totale humaine, très proche d&apos;un tissu natif avec sa structure faite de compartiments dermiques et épidermiques. Une sorte de peau générique, standard et reproductible »</I>, insiste Bruno Brisson, directeur général. L&apos;entreprise vise le monde des cosmétiques qui doivent tester les effets de leurs nouveaux produits sur de la peau humaine. Poietis travaillait déjà avec cinq partenaires, dont L&apos;Oréal et BASF Beauty Care Solutions.</Text>
+            </Section>
+            <Section>
+               <Text>Avec Poieskin, la société va pouvoir élargir son activité, visant aussi bien les grands laboratoires cosmétiques que les plus modestes n&apos;ayant pas d&apos;équipe de biologistes, ou encore la recherche académique. <I>« Nos prévisions de vente sont modestes sur les deux premières années, mais l&apos;idée est de pouvoir toucher un nombre assez important de clients avec des petits lots de produits standards ou à façon »</I>, explique Bruno Brisson. L&apos;entreprise, qui a déjà levé 2,5 millions d&apos;euros au total, espère boucler d&apos;ici à quelques semaines une nouvelle levée de fonds d&apos;environ 5 millions d&apos;euros.</Text>
+            </Section>
+            <Section>
+               <Encadre>
+                  <EncadreTitre>La stratégie</EncadreTitre>
+                  <EncadreIntertitre>Poietis</EncadreIntertitre>
+                  <EncadreTexte>
+                     <B>Date de création : </B>2014</EncadreTexte>
+                  <EncadreTexte>
+                     <B>Président : </B>Fabien Guillemot</EncadreTexte>
+                  <EncadreTexte>
+                     <B>Effectif : </B>25 personnes</EncadreTexte>
+                  <EncadreTexte>
+                     <B>Secteur : </B>santé</EncadreTexte>
+               </Encadre>
+            </Section>
+            <Section>
+               <Signature>Frank Niedercorn</Signature>
+               <Contributor>@FNiedercorn</Contributor>
+            </Section>
+         </Sections>
+      </Data>
+   </Document>
+</Publishing>

@@ -1,0 +1,45 @@
+31/01/18-18:59:10	#############################################################
+31/01/18-18:59:10	Appel $METH_ECHOS_EXPORTWEB/scripts/genere_images.sh WEB /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques/image_03.0.1231533600_.JPEG /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques/ /Production/LesEchos/Illustrations/PME Regions/Innovateurs/INNOV-Poietis bioprinter -web.jpg
+                 	Export de Type WEB2WEB
+                 	REP_CACHE=/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/CACHE_IMAGES ($METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES)
+                 	TYPE_EXPORT=WEB2WEB
+                 	TYPE_TRT=WEB
+                 	IMAGEREF=image_03.0.1231533600_.JPEG (0301231533600)
+                 	TYPE_FICHIER=<JPEG>
+                 	TYPE_TRT=WEB
+                 	IS_INFOGRAPHIE=NON
+                 	
+                 	
+                 	##
+31/01/18-18:59:10	### Traite_un JPEG  image_03.0.1231533600_.JPEG
+                 	##
+                 	
+                 	
+                 	CopieFic : /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques/image_03.0.1231533600_.JPEG -> /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques//0301231533600_print.jpg (WEB/basis -jpeg)
+                 	CopieFic /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques/image_03.0.1231533600_.JPEG -> /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques//0301231533600_print.jpg deja existant (WEB -jpeg)
+                 	FICHIER_A_TRAITER=/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques/image_03.0.1231533600_.JPEG=> HxL=763|1431|250.00|250.00
+                 	LARG=1431
+                 	LARG (1431) -ge 1000, on genere un format web_tete
+                 	image_03.0.1231533600_.JPEG => H=763 x L=1431 RES=250.00x250.00 px/pouce
+                 	LARGEUR_PX_WEB=620
+                 	LARGEUR_PX_ECWEWEB=1000
+                 	LARGEUR_PX_DOC=1000
+                 	LARGEUR_PX_WEB_TETE=1000
+                 	##
+31/01/18-18:59:10	### Genere_Images a partir de image_03.0.1231533600_.JPEG (Trt=WEB)
+                 	##
+31/01/18-18:59:10	wait 1749 1750 1751
+                 	==> 1 - Genere_Image doc pour image_03.0.1231533600_.JPEG (SIZE=1000,0), [CROP=]
+31/01/18-18:59:10	C'est une photo. On met une qualite de 55
+                 	==> 1 - Genere_Image web_tete pour image_03.0.1231533600_.JPEG (SIZE=1000,0), [CROP=]
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301231533600_doc.jpg dans le cache ?
+                 	==> 1 - Genere_Image web pour image_03.0.1231533600_.JPEG (SIZE=620,0), [CROP=]
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301231533600_web_tete.jpg dans le cache ?
+                 	imgtool -dotgain 20 -ctype RGB -profile /methode/common/imgtool/Photoshop5DefaultCMYK.icc -qual 100 -res /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques/image_03.0.1231533600_.JPEG00 -ftype jpeg -size 1000,0 /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques/image_03.0.1231533600_.JPEG  /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques//0301231533600_doc.jpg
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301231533600_web.jpg dans le cache ?
+                 	imgtool -dotgain 20 -ctype RGB -profile /methode/common/imgtool/Photoshop5DefaultCMYK.icc -qual 90 -res 72 -ftype jpeg -size 1000,0 /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques/image_03.0.1231533600_.JPEG  /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques//0301231533600_web_tete.jpg
+                 	imgtool -dotgain 20 -ctype RGB -profile /methode/common/imgtool/Photoshop5DefaultCMYK.icc -qual 55 -res 72 -ftype jpeg -size 620,0 /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques/image_03.0.1231533600_.JPEG  /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques//0301231533600_web.jpg
+                 	COPIE CACHE cp -p /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques//0301231533600_web.jpg $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES
+                 	COPIE CACHE cp -p /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques//0301231533600_web_tete.jpg $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES
+                 	COPIE CACHE cp -p /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1211500373/graphiques//0301231533600_doc.jpg $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES
+31/01/18-18:59:10	Fin de genere_images.sh [18:59.10 - 18:59.10] (SUCCES)

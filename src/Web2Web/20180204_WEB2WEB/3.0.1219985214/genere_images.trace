@@ -1,0 +1,135 @@
+31/01/18-12:50:13	#############################################################
+31/01/18-12:50:13	Appel $METH_ECHOS_EXPORTWEB/scripts/genere_images.sh WEB /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222966845_.JPEG /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/ /Production/SerieLimitee/Web/Illustrations/Beaute/1000X533 VUE STRATTO.jpg
+                 	Export de Type WEB2WEB
+                 	REP_CACHE=/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/CACHE_IMAGES ($METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES)
+                 	TYPE_EXPORT=WEB2WEB
+                 	TYPE_TRT=WEB
+                 	IMAGEREF=image_03.0.1222966845_.JPEG (0301222966845)
+                 	TYPE_FICHIER=<JPEG>
+                 	TYPE_TRT=WEB
+                 	IS_INFOGRAPHIE=NON
+                 	
+                 	
+                 	##
+31/01/18-12:50:13	### Traite_un JPEG  image_03.0.1222966845_.JPEG
+                 	##
+                 	
+                 	
+                 	CopieFic : /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222966845_.JPEG -> /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222966845_print.jpg (WEB/basis -jpeg)
+                 	CopieFic /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222966845_.JPEG -> /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222966845_print.jpg deja existant (WEB -jpeg)
+                 	FICHIER_A_TRAITER=/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222966845_.JPEG=> HxL=533|1000|300.00|300.00
+                 	LARG=1000
+                 	LARG (1000) -ge 1000, on genere un format web_tete
+                 	image_03.0.1222966845_.JPEG => H=533 x L=1000 RES=300.00x300.00 px/pouce
+                 	LARGEUR_PX_WEB=620
+                 	LARGEUR_PX_ECWEWEB=1000
+                 	LARGEUR_PX_DOC=1000
+                 	LARGEUR_PX_WEB_TETE=1000
+                 	##
+31/01/18-12:50:13	### Genere_Images a partir de image_03.0.1222966845_.JPEG (Trt=WEB)
+                 	##
+31/01/18-12:50:13	wait 12742 12743 12745
+                 	==> 1 - Genere_Image doc pour image_03.0.1222966845_.JPEG (SIZE=1000,0), [CROP=]
+                 	==> 1 - Genere_Image web_tete pour image_03.0.1222966845_.JPEG (SIZE=1000,0), [CROP=]
+31/01/18-12:50:13	C'est une photo. On met une qualite de 55
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222966845_doc.jpg dans le cache ?
+                 	==> 1 - Genere_Image web pour image_03.0.1222966845_.JPEG (SIZE=620,0), [CROP=]
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222966845_web_tete.jpg dans le cache ?
+                 	L'image 0301222966845_doc.jpg est dans le cache
+                 	L'image 0301222966845_web_tete.jpg est dans le cache
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222966845_web.jpg dans le cache ?
+                 	cp -p $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222966845_doc.jpg /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222966845_doc.jpg
+                 	L'image 0301222966845_web.jpg est dans le cache
+                 	cp -p $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222966845_web_tete.jpg /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222966845_web_tete.jpg
+                 	cp -p $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222966845_web.jpg /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222966845_web.jpg
+31/01/18-12:50:13	Fin de genere_images.sh [12:50.13 - 12:50.13] (SUCCES)
+31/01/18-12:50:13	#############################################################
+31/01/18-12:50:13	Appel $METH_ECHOS_EXPORTWEB/scripts/genere_images.sh WEB /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222971087_.JPEG /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/ /Production/SerieLimitee/Web/Illustrations/Beaute/STRATTO CHAMBRE 1000X800.jpg
+                 	Export de Type WEB2WEB
+                 	REP_CACHE=/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/CACHE_IMAGES ($METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES)
+                 	TYPE_EXPORT=WEB2WEB
+                 	TYPE_TRT=WEB
+                 	IMAGEREF=image_03.0.1222971087_.JPEG (0301222971087)
+                 	TYPE_FICHIER=<JPEG>
+                 	TYPE_TRT=WEB
+                 	IS_INFOGRAPHIE=NON
+                 	
+                 	
+                 	##
+31/01/18-12:50:13	### Traite_un JPEG  image_03.0.1222971087_.JPEG
+                 	##
+                 	
+                 	
+                 	CopieFic : /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222971087_.JPEG -> /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222971087_print.jpg (WEB/basis -jpeg)
+                 	CopieFic /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222971087_.JPEG -> /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222971087_print.jpg deja existant (WEB -jpeg)
+                 	FICHIER_A_TRAITER=/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222971087_.JPEG=> HxL=800|1000|72.00|72.00
+                 	LARG=1000
+                 	LARG (1000) -ge 1000, on genere un format web_tete
+                 	image_03.0.1222971087_.JPEG => H=800 x L=1000 RES=72.00x72.00 px/pouce
+                 	LARGEUR_PX_WEB=620
+                 	LARGEUR_PX_ECWEWEB=1000
+                 	LARGEUR_PX_DOC=1000
+                 	LARGEUR_PX_WEB_TETE=1000
+                 	##
+31/01/18-12:50:13	### Genere_Images a partir de image_03.0.1222971087_.JPEG (Trt=WEB)
+                 	##
+31/01/18-12:50:13	wait 13046 13047 13048
+                 	==> 1 - Genere_Image doc pour image_03.0.1222971087_.JPEG (SIZE=1000,0), [CROP=]
+31/01/18-12:50:13	C'est une photo. On met une qualite de 55
+                 	==> 1 - Genere_Image web_tete pour image_03.0.1222971087_.JPEG (SIZE=1000,0), [CROP=]
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222971087_doc.jpg dans le cache ?
+                 	L'image 0301222971087_doc.jpg est dans le cache
+                 	cp -p $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222971087_doc.jpg /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222971087_doc.jpg
+                 	==> 1 - Genere_Image web pour image_03.0.1222971087_.JPEG (SIZE=620,0), [CROP=]
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222971087_web_tete.jpg dans le cache ?
+                 	L'image 0301222971087_web_tete.jpg est dans le cache
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222971087_web.jpg dans le cache ?
+                 	cp -p $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222971087_web_tete.jpg /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222971087_web_tete.jpg
+                 	L'image 0301222971087_web.jpg est dans le cache
+                 	cp -p $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222971087_web.jpg /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222971087_web.jpg
+31/01/18-12:50:13	Fin de genere_images.sh [12:50.13 - 12:50.13] (SUCCES)
+31/01/18-12:50:14	#############################################################
+31/01/18-12:50:14	Appel $METH_ECHOS_EXPORTWEB/scripts/genere_images.sh WEB /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222980534_.JPEG /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/ /Production/SerieLimitee/Web/Illustrations/Beaute/1000X800 STRATO 1.jpg
+                 	Export de Type WEB2WEB
+                 	REP_CACHE=/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/CACHE_IMAGES ($METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES)
+                 	TYPE_EXPORT=WEB2WEB
+                 	TYPE_TRT=WEB
+                 	IMAGEREF=image_03.0.1222980534_.JPEG (0301222980534)
+                 	TYPE_FICHIER=<JPEG>
+                 	TYPE_TRT=WEB
+                 	IS_INFOGRAPHIE=NON
+                 	
+                 	
+                 	##
+31/01/18-12:50:14	### Traite_un JPEG  image_03.0.1222980534_.JPEG
+                 	##
+                 	
+                 	
+                 	CopieFic : /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222980534_.JPEG -> /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222980534_print.jpg (WEB/basis -jpeg)
+                 	CopieFic /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222980534_.JPEG -> /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222980534_print.jpg deja existant (WEB -jpeg)
+                 	FICHIER_A_TRAITER=/methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques/image_03.0.1222980534_.JPEG=> HxL=800|1000|5000.00|5000.00
+                 	LARG=1000
+                 	LARG (1000) -ge 1000, on genere un format web_tete
+                 	image_03.0.1222980534_.JPEG => H=800 x L=1000 RES=5000.00x5000.00 px/pouce
+                 	LARGEUR_PX_WEB=620
+                 	LARGEUR_PX_ECWEWEB=1000
+                 	LARGEUR_PX_DOC=1000
+                 	LARGEUR_PX_WEB_TETE=1000
+                 	##
+31/01/18-12:50:14	### Genere_Images a partir de image_03.0.1222980534_.JPEG (Trt=WEB)
+                 	##
+31/01/18-12:50:14	wait 13222 13223 13224
+                 	==> 1 - Genere_Image doc pour image_03.0.1222980534_.JPEG (SIZE=1000,0), [CROP=]
+                 	==> 1 - Genere_Image web_tete pour image_03.0.1222980534_.JPEG (SIZE=1000,0), [CROP=]
+31/01/18-12:50:14	C'est une photo. On met une qualite de 55
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222980534_doc.jpg dans le cache ?
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222980534_web_tete.jpg dans le cache ?
+                 	L'image 0301222980534_doc.jpg est dans le cache
+                 	==> 1 - Genere_Image web pour image_03.0.1222980534_.JPEG (SIZE=620,0), [CROP=]
+                 	L'image 0301222980534_web_tete.jpg est dans le cache
+                 	cp -p $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222980534_doc.jpg /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222980534_doc.jpg
+                 	$METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222980534_web.jpg dans le cache ?
+                 	cp -p $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222980534_web_tete.jpg /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222980534_web_tete.jpg
+                 	L'image 0301222980534_web.jpg est dans le cache
+                 	cp -p $METH_EXPORT_XML/20180131_WEB2WEB/CACHE_IMAGES/0301222980534_web.jpg /methode/meth01/mnt/tomcat/methode_share/export/export_XML/20180131_WEB2WEB/3.0.1219985214/graphiques//0301222980534_web.jpg
+31/01/18-12:50:14	Fin de genere_images.sh [12:50.14 - 12:50.14] (SUCCES)

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Publishing
+  SYSTEM "lepechos.dtd">
+<Publishing>
+   <Operation>LiveUpdate</Operation>
+   <Document>
+      <Code>0301219985214</Code>
+      <DocumentNature>TXT</DocumentNature>
+      <DataType>ARTICLE</DataType>
+      <Metadata>
+         <AdministrativeMetadata>
+            <Provider>LesEchos</Provider>
+            <Creator>LesEchos</Creator>
+            <Source>LesEchos</Source>
+         </AdministrativeMetadata>
+         <AnteriorityMetadata>
+            <Media/>
+            <MediaLabel/>
+            <Segment/>
+            <SousSegment/>
+            <Theme/>
+            <SousTheme/>
+            <PublicationDate>
+               <ISO>2018-01-31T09:19:33+0100</ISO>
+            </PublicationDate>
+            <IssueNumber/>
+            <PageNumber/>
+            <SequenceNumber/>
+            <NextPageNumber/>
+         </AnteriorityMetadata>
+         <DescriptiveMetadata>
+            <Authors>
+               <Author>
+                  <Name>LAURE GUILBAULT</Name>
+                  <EMail/>
+               </Author>
+            </Authors>
+            <Companies>
+               <CompanySubject>
+                  <Name/>
+                  <CompanyList/>
+               </CompanySubject>
+            </Companies>
+            <Geographies>
+               <Geography/>
+            </Geographies>
+            <Keywords>
+               <Keyword/>
+            </Keywords>
+            <Biographies>
+               <Biography/>
+            </Biographies>
+            <Language>FR</Language>
+            <Abstract>Ambiance familiale pour cet hôtel idéalement situé dans le paradis du ski français.</Abstract>
+         </DescriptiveMetadata>
+         <ManagementMetadata>
+            <Categories>
+               <Category>
+                  <Source>sli-web</Source>
+                  <Segment>voyage</Segment>
+                  <SegmentLabel>Voyage</SegmentLabel>
+                  <SousSegment/>
+                  <SousSegmentLabel/>
+                  <Theme>hotel</Theme>
+                  <ThemeLabel>L&apos;hôtel</ThemeLabel>
+                  <SousTheme/>
+                  <SousThemeLabel/>
+               </Category>
+            </Categories>
+            <Subject>Destination : Le Strato Courchevel</Subject>
+            <CreationDate>2018-01-31T09:19:33+0100</CreationDate>
+            <UpdateDate>2018-01-31T12:50:16+0100</UpdateDate>
+            <VersionDate>31/01/2018</VersionDate>
+            <VersionTime>12:50:16</VersionTime>
+            <PublicationDate>
+               <ISO>2018-01-31T09:19:33+0100</ISO>
+            </PublicationDate>
+            <RelegationDate>2018-05-01T08:18:41+0100</RelegationDate>
+            <UnPublicationDate>2018-05-22T08:18:41+0100</UnPublicationDate>
+            <DeletionDate>2018-05-22T08:18:41+0100</DeletionDate>
+            <PriorityLevel>3</PriorityLevel>
+            <WordCount>334</WordCount>
+            <LineCount>41</LineCount>
+            <SignCount>2453</SignCount>
+            <ForeseenCount/>
+         </ManagementMetadata>
+         <RightsMetadata>
+            <Copyright>
+               <CopyrightHolder>Les Echos</CopyrightHolder>
+               <CopyrightDate>2018</CopyrightDate>
+            </Copyright>
+            <UsageRights>
+               <UsageRight>
+                  <Recipient/>
+                  <UsageType/>
+                  <Geography>France</Geography>
+                  <RightsHolder>Les Echos</RightsHolder>
+                  <StartDate/>
+                  <EndDate/>
+                  <Limitations>Tous droits réservés (2018) LES ECHOS - Toutes les informations reproduites dans ce fichier sont protégées par les droits de propriété intellectuelle détenus par LES ECHOS. Aucune de ces informations ne peut être reproduite, modifiée, exploitée ou réutilisée de quelque manière que ce soit sans l&apos;accord préalable écrit des ECHOS</Limitations>
+               </UsageRight>
+            </UsageRights>
+            <ConfidentialityLevel/>
+         </RightsMetadata>
+      </Metadata>
+      <Data>
+         <Introduction>
+            <Headline>Destination : Le Strato Courchevel</Headline>
+            <Byline/>
+            <Heading>
+               <Head>Ambiance familiale pour cet hôtel idéalement situé dans le paradis du ski français.</Head>
+               <Info1/>
+               <Info2/>
+               <Info3/>
+               <Info4/>
+               <Info5/>
+               <Info6/>
+            </Heading>
+            <Notes/>
+         </Introduction>
+         <Sections>
+            <Section>
+               <MultimediaInserts>
+                  <MultimediaInsert>
+                     <Reference>0301222966845</Reference>
+                     <Loid>3.0.1222966845</Loid>
+                     <FileFormat/>
+                     <FileType>PHO</FileType>
+                     <Caption>Vue Sud - Est du Strato Courchevel.</Caption>
+                     <Copyright/>
+                     <Placement>Left</Placement>
+                     <PixelWidth>1000</PixelWidth>
+                     <PixelHeight>533</PixelHeight>
+                     <Title>Vue Sud - Est du Strato Courchevel.</Title>
+                     <Byline/>
+                     <Source/>
+                  </MultimediaInsert>
+               </MultimediaInserts>
+            </Section>
+            <Section>
+               <Text>Un joli chalet aux toits de lauze et façades en bois abrite 25 chambres et un spa de 800 mètres carrés. Il tient son nom du modèle emblématique des skis Rossignol dirigé longtemps par les Boix Vives, propriétaires de l&apos;hôtel et constructeur d&apos;un des premiers remonte pente de Courchevel - en 1946 - Année du lancement de la station savoyarde première en France crée de toutes pièces. Chambres et suites à la décoration cosy offrent des vues splendides sur la montagne. Dans tout l&apos;hôtel des pièces de la collection d&apos;art des propriétaires sont accrochées.</Text>
+            </Section>
+            <Section>
+               <MultimediaInserts>
+                  <MultimediaInsert>
+                     <Reference>0301222971087</Reference>
+                     <Loid>3.0.1222971087</Loid>
+                     <FileFormat/>
+                     <FileType>PHO</FileType>
+                     <Caption>Chambre du Strato Courchevel.</Caption>
+                     <Copyright>©DR</Copyright>
+                     <Placement>Left</Placement>
+                     <PixelWidth>1000</PixelWidth>
+                     <PixelHeight>800</PixelHeight>
+                     <Title>Chambre du Strato Courchevel.</Title>
+                     <Byline/>
+                     <Source/>
+                  </MultimediaInsert>
+               </MultimediaInserts>
+               <Text>On y goûte la cuisine raffinée du chef Jean-André Charial, doublement étoilé à l&apos;Ousteau de Baumanière aux Baux-de-Provence. Le chef executif Lowell Messier est un maestro du veau fourré à la truffe mais il y a aussi à la carte d&apos;ancestrales recettes de la région revisitées à la sauce provençale. Prenez un dessert ou plutôt craquez sur le millefeuille, il est exceptionnel.</Text>
+               <MultimediaInserts>
+                  <MultimediaInsert>
+                     <Reference>0301222980534</Reference>
+                     <Loid>3.0.1222980534</Loid>
+                     <FileFormat/>
+                     <FileType>PHO</FileType>
+                     <Caption>Cuisine du chef Jean-André Charial, doublement étoilé.</Caption>
+                     <Copyright>©DR</Copyright>
+                     <Placement>Left</Placement>
+                     <PixelWidth>1000</PixelWidth>
+                     <PixelHeight>800</PixelHeight>
+                     <Title>Cuisine du chef Jean-André Charial, doublement étoilé.</Title>
+                     <Byline/>
+                     <Source/>
+                  </MultimediaInsert>
+               </MultimediaInserts>
+               <Text>Un hôtel fait pour les skieurs où la « ski room » est fonctionnelle. Après avoir parcouru les 600 kilomètres de pistes des Trois Vallées, ils sont cocoonnés au spa Sothys. Le massage « signature » est un must après ski (il combine drainage et manoeuvre pour la récupération musculaire) avant de profiter de la piscine qui face aux pistes, offre une vue imprenable et permet aux plus courageux de s&apos;offrir un bain de neige avant de passer au hammam ou au sauna. Une salle de fitness avec coach sur demande est attenante au spa. Une ambiance familiale avec un service discret et efficace.</Text>
+            </Section>
+            <Section>
+               <Text>
+                  <ExternalLink>
+                     <LinkText>www.hotelstrato.com</LinkText>
+                     <URL>http://www.hotelstrato.com/</URL>
+                  </ExternalLink>
+               </Text>
+            </Section>
+            <Section>
+               <Signature>Frédérique Dedet</Signature>
+            </Section>
+         </Sections>
+      </Data>
+   </Document>
+</Publishing>
