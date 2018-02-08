@@ -1,4 +1,4 @@
-let ARR = { toto: [] };
+let ARR = { response: [] };
 
 TRAITE_META = meta => {
   let data = meta[0];
@@ -46,7 +46,7 @@ EXTRACT_CORRELATION_GRAPHIQUE = file => {
 };
 
 TRAITE_DOCUMENT = doc => {
-  console.log(doc);
+  // console.log(doc);
   console.log('====================== XML DOCUMENT ===================');
 };
 
@@ -94,8 +94,8 @@ EXTRACT_DATA = (datedExport, id, data) => {
         }
       }
       // objResult.data = result;
-      console.log(objResult);
-      ARR.toto.push(objResult);
+      // console.log(objResult);
+      ARR.response.push(objResult);
       // TRAITE_DATA(arrResult);
     });
 };
