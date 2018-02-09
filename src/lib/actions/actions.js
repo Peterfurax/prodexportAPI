@@ -1,75 +1,73 @@
-const toCsv = require('../convert/toCsv');
-const toJson = require('../convert/toJson');
-const fs = require('fs');
+const toCsv = require('../convert/toCsv')
+const toJson = require('../convert/toJson')
+const fs = require('fs')
+
+// entete nom de fichier pour export csv
+const exportNameCsv = 'export_csv_'
 
 /**
  * [XML_TO_JSON description]
- * @param {[type]} xmlPath [uri du fichier xml a convertir]
+ * @param {string} xmlPath [uri du fichier xml a convertir]
  */
-
-XML_TO_JSON = xmlPath => {
-  toJson.XML_TO_JSON(xmlPath);
-  // require('../socket/socket').OPEN_SOCKET("dds")
-};
+const XML_TO_JSON = xmlPath => {
+  toJson.XML_TO_JSON(xmlPath)
+}
 
 /**
  * [JSON_TO_CSV description]
- * @param {[type]} jsonData [données json a convetir vers CSV]
+ * @param {json} jsonData [données json a convetir vers CSV]
  */
-
-JSON_TO_CSV = jsonData => {
-  toCsv.JSON_TO_CSV(jsonData);
-};
+const JSON_TO_CSV = jsonData => {
+  toCsv.JSON_TO_CSV(jsonData)
+}
 
 /**
  * [WRITE_FILE description]
- * @param {[type]} file [Fichier]
- * @param {[type]} data  [Données]
+ * @param {string} file [Fichier]
+ * @param {string} data  [Données]
  */
-WRITE_FILE = (file, data) => {
+const WRITE_FILE = (file, data) => {
   fs.writeFile(file, data, err => {
-    if (err) throw err;
-  });
-};
+    if (err) throw err
+  })
+}
 
 /**
  * [CSV_NAME_FILE description]
- * @param {[type]} fileName [return un nom de fichier daté]
- * @param {[type]} err      [Gestion erreur]
+ * @param {string} fileName [return un nom de fichier daté]
+ * @param {obj} err      [Gestion erreur]
  */
-CSV_NAME_FILE = (fileName, err) => {
-  if (err) throw err;
-  return fileName + Date.now() + '.csv';
-};
+const CSV_NAME_FILE = (fileName, err) => {
+  if (err) throw err
+  return fileName + Date.now() + '.csv'
+}
 
-DATA = data => {};
 
 /**
  * [WRITE_FILE_CSV description]
- * @param {[type]} csv [description]
- * @param {[type]} err [description]
+ * @param {csv} csv [csv data]
+ * @param {obj} err [err]
  */
-WRITE_FILE_CSV = (csv, err) => {
-  if (err) throw err;
-  WRITE_FILE(CSV_NAME_FILE('export_csv_'), csv);
-};
+const WRITE_FILE_CSV = (csv, err) => {
+  if (err) throw err
+  WRITE_FILE(CSV_NAME_FILE(exportNameCsv), csv)
+}
 
 /**
  * [READ_FILE description]
- * @param {[type]} path [description]
+ * @param {string} path [description]
+ * @return {string} data [data read]
  */
-READ_FILE = path => {
+const READ_FILE = path => {
   fs.readFile(path, (err, data) => {
-    if (err) throw err;
-    // console.log(data)
-    return data;
-  });
-};
+    if (err) throw err
+    return data
+  })
+}
 
 module.exports = {
   XML_TO_JSON: XML_TO_JSON,
   JSON_TO_CSV: JSON_TO_CSV,
-  DATA: DATA,
   WRITE_FILE_CSV: WRITE_FILE_CSV,
   READ_FILE: READ_FILE
-};
+}

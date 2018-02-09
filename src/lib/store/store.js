@@ -1,123 +1,165 @@
-let ARR = { response: [] };
+let ARR = { response: [] }
 
-TRAITE_META = meta => {
-  let data = meta[0];
-  // console.log(data)
-};
+/**
+ * fileTypeTest
+ * 
+ * @param {any} file 
+ * @returns 
+ */
+const fileTypeTest = file => {
+  if (require('path').extname(file) === '.JPEG') return 'JPEG'
+  if (require('path').extname(file) === '.XML') return 'XML'
+}
 
-TEST_FILES = file => {
-  if (require('path').extname(file) === '.JPEG') return 'JPEG';
-  if (require('path').extname(file) === '.XML') return 'XML';
-};
+/**
+ * extractFile
+ * 
+ * @param {any} data 
+ * @returns 
+ */
+const extractFile = data => {
+  return new Promise((resolve, reject) => {
+    if (data.length < 1) {
+      reject('pas de fichiers')
+    } else {
+      console.log(data.length + ' FICHIERS A EXPORTER')
+      resolve(data)
+    }
+  })
+}
 
-TRAITE_GRAPHIQUE = file => {
-  // console.log(file);
-  Promise.all([EXTRACT_CORRELATION_GRAPHIQUE(file.correlations), EXTRACT_DBMETADATA_GRAPHIQUE(file.dbMetadata)])
-    .then(result => {
-      console.log(result[0].correlation);
+/**
+ * EXTRACT_DATA
+ * 
+ * @param {any} datedExport 
+ * @param {any} id 
+ * @param {any} data 
+ */
+const EXTRACT_DATA = (datedExport, id, data) => {
+  let objResult = {}
+  objResult.datedExport = datedExport
+  objResult.id = id
+  extractFile(data.prodexport.file)
+    .catch(err => console.err(err))
+    .then(fileList => {
+      objResult.files = {}
+      for (var i = 0; i < fileList.length; i++) {
+        if (fileTypeTest(fileList[i].$.href) === 'JPEG') {
+          objResult.files.graph = []
+          objResult.files.graph.push(fileList[i])
+        } else {
+          objResult.files.doc = []
+          objResult.files.doc.push(fileList[i])
+        }
+      }
+      ARR.response.push(objResult)
     })
-    .catch(err => {
-      // console.log(err);
-    });
-};
+}
+
+
+module.exports = {
+  EXTRACT_DATA: EXTRACT_DATA,
+  ARR: ARR
+}
+
+
+// const TRAITE_META = meta => {
+//   let data = meta[0]
+// }
+
+// const TRAITE_GRAPHIQUE = file => {
+//   // console.log(file)
+//   Promise.all([EXTRACT_CORRELATION_GRAPHIQUE(file.correlations), EXTRACT_DBMETADATA_GRAPHIQUE(file.dbMetadata)])
+//     .then(result => {
+//       console.log(result[0].correlation)
+//     })
+//     .catch(err => {
+//       // console.log(err)
+//     })
+// }
 
 // EXTRACT_CORRELATION = (file) => {
 //   let arr_correlation = []
 //   return new Promise((resolve, reject) => {
 //     if (!file) reject('pas de fichier ???')
-//     for (var i = 0; i < file.correlations.length; i++) {
+//     for (var i = 0 i < file.correlations.length i++) {
 //       //TODO gerer plus de correlation
 //       arr_correlation.push(file.correlations[i].correlation[0].$.obj)
 //     }
 //     resolve(arr_correlation)
-//   });
+//   })
 // }
 
-EXTRACT_CORRELATION_GRAPHIQUE = file => {
-  let arr_correlation = [];
-  return new Promise((resolve, reject) => {
-    if (!file) reject('pas de fichier ???');
-    for (var i = 0; i < file.length; i++) {
-      //TODO gerer plus de correlation
-      arr_correlation.correlation = file[i].correlation[0].$.obj;
-    }
-    resolve(arr_correlation);
-  });
-};
+// const EXTRACT_CORRELATION_GRAPHIQUE = file => {
+//   let arr_correlation = []
+//   return new Promise((resolve, reject) => {
+//     if (!file) reject('pas de fichier ???')
+//     for (var i = 0 i < file.length i++) {
+//       //TODO gerer plus de correlation
+//       arr_correlation.correlation = file[i].correlation[0].$.obj
+//     }
+//     resolve(arr_correlation)
+//   })
+// }
 
-TRAITE_DOCUMENT = doc => {
-  // console.log(doc);
-  console.log('====================== XML DOCUMENT ===================');
-};
+// const TRAITE_DOCUMENT = doc => {
+//   // console.log(doc)
+//   console.log('====================== XML DOCUMENT ===================')
+// }
 
-EXTRACT_DBMETADATA_GRAPHIQUE = data => {
-  return new Promise((resolve, reject) => {
-    if (data.length < 1) {
-      reject('pas de fichiers');
-    } else {
-      // console.log('meta', data);
-      resolve(data);
-    }
-  });
-};
+// const EXTRACT_DBMETADATA_GRAPHIQUE = data => {
+//   return new Promise((resolve, reject) => {
+//     if (data.length < 1) {
+//       reject('pas de fichiers')
+//     } else {
+//       // console.log('meta', data)
+//       resolve(data)
+//     }
+//   })
+// }
 
-TRAITE_DATA = ArrFichiers => {
-  let arr = [];
-  let fileList = ArrFichiers.data;
-  for (var i = 0; i < fileList.length; i++) {
-    if (TEST_FILES(fileList[i].$.href) === 'JPEG') {
-      // TRAITE_GRAPHIQUE(fileList[i]);
-    } else {
-      // TRAITE_DOCUMENT(fileList[i]);
-    }
-  }
-};
+// const TRAITE_DATA = ArrFichiers => {
+//   let arr = []
+//   let fileList = ArrFichiers.data
+//   for (var i = 0; i < fileList.length; i++) {
+//     if (TEST_FILES(fileList[i].$.href) === 'JPEG') {
+//       // TRAITE_GRAPHIQUE(fileList[i])
+//     } else {
+//       // TRAITE_DOCUMENT(fileList[i])
+//     }
+//   }
+// }
 
-EXTRACT_DATA = (datedExport, id, data) => {
-  let objResult = {};
-  objResult.datedExport = datedExport;
-  objResult.id = id;
-  objResult.files = {};
-  objResult.files.graph = [];
-  objResult.files.doc = [];
-  EXTRACT_FILES(data.prodexport.file)
-    .catch(err => console.err(err))
-    .then(fileList => {
-      for (var i = 0; i < fileList.length; i++) {
-        if (TEST_FILES(fileList[i].$.href) === 'JPEG') {
-          objResult.files.graph.push(fileList[i]);
 
-          // TRAITE_GRAPHIQUE(fileList[i]);
-        } else {
-          objResult.files.doc.push(fileList[i]);
-          // TRAITE_DOCUMENT(fileList[i]);
-        }
-      }
-      // objResult.data = result;
-      // console.log(objResult);
-      ARR.response.push(objResult);
-      // TRAITE_DATA(arrResult);
-    });
-};
 
-EXTRACT_FILES = data => {
-  return new Promise((resolve, reject) => {
-    if (data.length < 1) {
-      reject('pas de fichiers');
-    } else {
-      console.log(data.length + ' FICHIERS A EXPORTER');
-      resolve(data);
-    }
-  });
-};
 
-b = () => {};
 
-module.exports = {
-  EXTRACT_DATA: EXTRACT_DATA,
-  EXTRACT_FILES: EXTRACT_FILES,
-  ARR: ARR
-};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // testValue(result, "result.prodexport.file[1]")
 // actions.TRAITE_JSON_FROM_XML(result.prodexport.file[1])
