@@ -43,12 +43,12 @@ const EXTRACT_DATA = (datedExport, id, data) => {
     .catch(err => console.err(err))
     .then(fileList => {
       objResult.files = {};
+      objResult.files.graph = [];
+      objResult.files.doc = [];
       for (var i = 0; i < fileList.length; i++) {
         if (fileTypeTest(fileList[i].$.href) === "JPEG") {
-          objResult.files.graph = [];
           objResult.files.graph.push(fileList[i]);
         } else {
-          objResult.files.doc = [];
           objResult.files.doc.push(fileList[i]);
         }
       }
