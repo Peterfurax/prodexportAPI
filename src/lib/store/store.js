@@ -1,67 +1,65 @@
-let ARR = { response: [] }
+let ARR = { response: [] };
 
 /**
  * fileTypeTest
- * 
- * @param {any} file 
- * @returns 
+ *
+ * @param {any} file
+ * @returns
  */
 const fileTypeTest = file => {
-  if (require('path').extname(file) === '.JPEG') return 'JPEG'
-  if (require('path').extname(file) === '.XML') return 'XML'
-}
+  if (require("path").extname(file) === ".JPEG") return "JPEG";
+  if (require("path").extname(file) === ".XML") return "XML";
+};
 
 /**
  * extractFile
- * 
- * @param {any} data 
- * @returns 
+ *
+ * @param {any} data
+ * @returns
  */
 const extractFile = data => {
   return new Promise((resolve, reject) => {
     if (data.length < 1) {
-      reject('pas de fichiers')
+      reject("pas de fichiers");
     } else {
-      console.log(data.length + ' FICHIERS A EXPORTER')
-      resolve(data)
+      console.log(data.length + " FICHIERS A EXPORTER");
+      resolve(data);
     }
-  })
-}
+  });
+};
 
 /**
  * EXTRACT_DATA
- * 
- * @param {any} datedExport 
- * @param {any} id 
- * @param {any} data 
+ *
+ * @param {any} datedExport
+ * @param {any} id
+ * @param {any} data
  */
 const EXTRACT_DATA = (datedExport, id, data) => {
-  let objResult = {}
-  objResult.datedExport = datedExport
-  objResult.id = id
+  let objResult = {};
+  objResult.datedExport = datedExport;
+  objResult.id = id;
   extractFile(data.prodexport.file)
     .catch(err => console.err(err))
     .then(fileList => {
-      objResult.files = {}
+      objResult.files = {};
       for (var i = 0; i < fileList.length; i++) {
-        if (fileTypeTest(fileList[i].$.href) === 'JPEG') {
-          objResult.files.graph = []
-          objResult.files.graph.push(fileList[i])
+        if (fileTypeTest(fileList[i].$.href) === "JPEG") {
+          objResult.files.graph = [];
+          objResult.files.graph.push(fileList[i]);
         } else {
-          objResult.files.doc = []
-          objResult.files.doc.push(fileList[i])
+          objResult.files.doc = [];
+          objResult.files.doc.push(fileList[i]);
         }
       }
-      ARR.response.push(objResult)
-    })
-}
-
+      ARR.response.push(objResult);
+    });
+};
 
 module.exports = {
   EXTRACT_DATA: EXTRACT_DATA,
   ARR: ARR
-}
-
+};
 
 // const TRAITE_META = meta => {
 //   let data = meta[0]
@@ -129,37 +127,6 @@ module.exports = {
 //     }
 //   }
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // testValue(result, "result.prodexport.file[1]")
 // actions.TRAITE_JSON_FROM_XML(result.prodexport.file[1])
