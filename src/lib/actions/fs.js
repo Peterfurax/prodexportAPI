@@ -1,17 +1,17 @@
 const fs = require("fs");
-
+// const moment = require("moment")
 // entete nom de fichier pour export csv
 const exportNameCsv = "export_csv_";
-const horodatage = () => Date.now();
+const horodatage = new Date().getTime();
 const extentionCsv = ".csv";
 
 /**
- * [CSV_NAME_FILE description]
+ * [csvNameFile description]
  * @param {string} fileName [return un nom de fichier daté]
  * @return {string} fileName horodaté
  */
-const CSV_NAME_FILE = fileName => {
-  fileName + horodatage + extentionCsv;
+const csvNameFile = fileName => {
+  return fileName + horodatage + extentionCsv;
 };
 
 /**
@@ -20,8 +20,11 @@ const CSV_NAME_FILE = fileName => {
  * @param {string} data  [Données]
  */
 const WRITE_FILE = (file, data) => {
-  fs.writeFile(file, data, err => {
-    if (err) throw err;
+  return new Promise((resolve, reject) => {
+    fs.writeFile(file, data, err => {
+      if (err) reject(err);
+      resolve(file);
+    });
   });
 };
 
@@ -30,9 +33,16 @@ const WRITE_FILE = (file, data) => {
  * @param {csv} csv [csv data]
  * @param {obj} err [err]
  */
-const WRITE_FILE_CSV = (csv, err) => {
-  if (err) throw err;
-  WRITE_FILE(CSV_NAME_FILE(exportNameCsv), csv);
+const WRITE_FILE_CSV = (csv) => {
+  return new Promise((resolve, reject) => {
+    WRITE_FILE(csvNameFile(exportNameCsv), csv)
+      .then(file => {
+        resolve(file);
+      })
+      .catch(err => {
+        reject(err);
+      });
+  });
 };
 
 /**

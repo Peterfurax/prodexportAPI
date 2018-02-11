@@ -14,7 +14,16 @@ const XML_TO_JSON = xmlPath => {
  * @param {json} jsonData [données json a convetir vers CSV]
  */
 const JSON_TO_CSV = jsonData => {
-  toCsv.JSON_TO_CSV(jsonData);
+  return new Promise((resolve, reject) => {
+    toCsv
+      .JSON_TO_CSV(jsonData)
+      .then(val => {
+        resolve(val);
+      })
+      .catch(err => {
+        reject(err);
+      });
+  });
 };
 
 module.exports = {
