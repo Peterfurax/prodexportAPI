@@ -4,6 +4,7 @@ const convert = require("../actions/convert");
 // const sdvDateFormat = 'YYYYMMDDHHmmss';
 // momentDate.utc().format(sdvDateFormat)
 const MAPPING_TO_CSV = () => {
+  console.log('tatat')
   return new Promise((resolve, reject) => {
     let docs = [];
     // TODO gerer les dates
@@ -40,9 +41,11 @@ const MAPPING_TO_CSV = () => {
       convert
         .JSON_TO_CSV(docs)
         .then(val => {
+          // console.log(val)
           resolve(val);
         })
         .catch(err => {
+          if (err) console.log(err)
           reject(err);
         });
     });

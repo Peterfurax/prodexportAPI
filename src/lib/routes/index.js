@@ -12,6 +12,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/csv", (req, res) => {
+  res.setHeader('Content-Type', 'text/csv; charset=UTF-8,%EF%BB%BF');
   exporter
     .EXPORT_CSV()
     .then((filePath, file) => {

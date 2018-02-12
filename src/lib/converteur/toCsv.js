@@ -10,6 +10,8 @@ const files = require("../actions/fs");
 const JSON_TO_CSV = json => {
   return new Promise((resolve, reject) => {
     jsontocsv.json2csv(json, (err, csv) => {
+      console.log(json)
+      console.log(csv)
       if (err) reject(err);
       resolve(csv);
     });
