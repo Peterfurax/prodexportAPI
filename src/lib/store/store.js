@@ -9,12 +9,12 @@ let ARR = { response: [] };
  */
 const fileTypeTest = file => {
   switch (pathfinder.extname(file)) {
-  case ".JPEG":
-    return "JPEG";
-  case ".XML":
-    return "XML";
-  default:
-    return "INCONNU";
+    case ".JPEG":
+      return "JPEG";
+    case ".XML":
+      return "XML";
+    default:
+      return "INCONNU";
   }
 };
 

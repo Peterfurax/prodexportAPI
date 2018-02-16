@@ -1,6 +1,34 @@
 const jsontocsv = require("json-2-csv");
-const files = require("../actions/fs");
 
+
+var options = {
+  delimiter: {
+    wrap: '"', // Double Quote (") character
+    field: ";", // Comma field delimiter
+    array: ",", // Semicolon array value delimiter
+    eol: "\n" // Newline delimiter
+  },
+  prependHeader: true,
+  sortHeader: false,
+  trimHeaderValues: true,
+  trimFieldValues: true,
+  checkSchemaDifferences: false,
+  // keys: [
+  //   "Make",
+  //   "Model",
+  //   "Year",
+  //   "Specifications.Mileage",
+  //   "Specifications.Trim"
+  // ]
+};
+
+
+// var json2csvCallback = function(err, csv) {
+//   if (err) throw err;
+//   console.log(csv);
+// };
+
+// converter.json2csv(documents, json2csvCallback, options);
 
 /**
  * JSON TO CSV
@@ -9,12 +37,14 @@ const files = require("../actions/fs");
  */
 const JSON_TO_CSV = json => {
   return new Promise((resolve, reject) => {
-    jsontocsv.json2csv(json, (err, csv) => {
-      console.log(json)
-      console.log(csv)
+
+    let  json2csvCallback = (err, csv) => {
+      // console.log(csv);
       if (err) reject(err);
       resolve(csv);
-    });
+    };
+
+    jsontocsv.json2csv(json, json2csvCallback, options);
   });
 };
 
