@@ -1,14 +1,28 @@
+/**
+ * Provides modules class...
+ * @module Actions
+ * @class Actions exporter
+ */
+
 const csvMapper = require("../store/csvMapper");
 const fileMan = require("../actions/fs");
 const date = require("../converteur/date");
-const EXPORT_CSV = () => {
+
+/**
+ * @public
+ * @method exportCSV
+ * @description genere un nom de fichier horaodaté
+ * @returns {promise} fileName horodaté
+ * 
+ */
+const exportCSV = () => {
   return new Promise((resolve, reject) => {
-    console.log(date.DateNow(),"je lance export");
+    console.log(date.DateNow(), "je lance export");
     csvMapper
       .MAPPING_TO_CSV()
       .then(val => {
         fileMan
-          .WRITE_FILE_CSV(val)
+          .writeFileCSV(val)
           .then(filePath => {
             console.log(filePath);
             resolve("./" + filePath, filePath);
@@ -23,4 +37,4 @@ const EXPORT_CSV = () => {
   });
 };
 
-module.exports = { EXPORT_CSV: EXPORT_CSV };
+module.exports = { exportCSV: exportCSV };

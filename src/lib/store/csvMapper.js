@@ -1,3 +1,9 @@
+/**
+ * Provides modules class...
+ * @module Store
+ * @class  csv Matpper
+ */
+
 const store = require("./store");
 const convert = require("../actions/convert");
 const dateConverter = require("../converteur/date");

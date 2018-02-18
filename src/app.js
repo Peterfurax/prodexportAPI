@@ -23,4 +23,11 @@ const webServer = require("./lib/socket/webServer");
 /**
  * Lancement du daemon pour scruter dossier daté.
  */
+
+
+/**
+ * chokidar
+ * 
+ */
+
 daemon.WATCHER("Web2Web\\" + dateFolder + "_WEB2WEB", "prodexport.xml");

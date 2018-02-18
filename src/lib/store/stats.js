@@ -1,3 +1,8 @@
+/**
+ * Provides modules class...
+ * @module Store
+ * @class  stats Store
+ */
 let statsCount = {
   dateLoading: "",
   isManual: false,

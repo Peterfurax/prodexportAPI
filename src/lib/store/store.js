@@ -1,3 +1,9 @@
+/**
+ * Provides modules class...
+ * @module Store
+ * @class  data Store
+ */
+
 const pathfinder = require("path");
 const webProdexport = { response: [] };
 const date = require("../converteur/date");
@@ -5,8 +11,7 @@ const stats = require("../store/stats");
 /**
  * fileTypeTest
  *
- * @param {any} file
- * @returns
+ * @param {string} file a reecrire
  */
 const fileTypeTest = file => {
   switch (pathfinder.extname(file)) {
@@ -23,7 +28,6 @@ const fileTypeTest = file => {
  * extractFile
  *
  * @param {any} data
- * @returns
  */
 const extractFile = data => {
   return new Promise((resolve, reject) => {

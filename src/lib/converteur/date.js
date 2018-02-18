@@ -1,16 +1,25 @@
-const moment = require("moment"); // https://momentjs.com/docs/
 /**
- * Convert date now to file pattern
- *
- * @return {string} "DDMMYYYY_HHmmss"
+ * Provides modules class...
+ * @module Converter
+ * @class Converter date 
+ */
+
+const moment = require("moment"); // https://momentjs.com/docs/
+
+/**
+ * @public
+ * @method DateNowFile
+ * @description genere date now au format YYYYMMDD
+ * @return {string} "20180131"
  */
 const DateNowFile = () => {
   return moment().format("YYYYMMDD");
 };
 
 /**
- * Convert date now for fileName
- *
+ * @public
+ * @method DateNow
+ * @description Convertie date now
  * @return {string} "DD-MM-YYYY HH:mm:ss"
  */
 const DateNow = () => {
@@ -18,7 +27,9 @@ const DateNow = () => {
 };
 
 /**
- * Convert unix date to human date
+ * @public
+ * @method unixDateToHuman
+ * @description Convert unix date to human date
  * @param {number} unixDate
  * @return {string} "DD-MM-YYYY"
  */
@@ -27,7 +38,9 @@ const unixDateToHuman = unixDate => {
 };
 
 /**
- * Convert unix time to human time
+ * @public
+ * @method unixDateToHuman
+ * @description Convert unix time to human time
  * @param {number} unixDate
  * @return {string} "HH:mm:ss"
  */

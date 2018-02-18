@@ -8,21 +8,26 @@ const c = require("../store/log");
 const web2WebExt = "WEB2WEB";
 /**
  * WATCHER
- *  watch datingFolder for file and load XML_TO_JSON when file match fileToWatch
- * @param {string} datingFolder
- * @param {string} fileToWatch
+ *  watch datingFolder for file and load xmlToJSON when file match fileToWatch
+ * @param {string} datingFolder exemple 20180131
+ * @param {string} fileToWatch exemple prodexport.xml
+ * @requires chokidar 
  */
 let WATCHER = (datingFolder, fileToWatch) => {
   c.l(
     date.DateNow() +
-       " WEBTOCSV    ========================> DOSSIER " +
+      " WEBTOCSV    ========================> DOSSIER " +
       datingFolder
   );
   var watcher = chokidar.watch(datingFolder, {
     ignored: /(^|[\/\\])\../,
     persistent: true
   });
-
+/**
+ * WATCHER ON
+ * @author Pierre Montoya
+ * @param {string} pathUri
+ */
   watcher.on("add", pathUri => {
     stats.statsCount.FolderCount += 1;
     let isWeb2WebFolder = pathUri.split(pathfinder.sep)[1].split("_")[1];
@@ -33,7 +38,7 @@ let WATCHER = (datingFolder, fileToWatch) => {
       pathfinder.basename(pathUri) === fileToWatch
     ) {
       stats.statsCount.prodexportCount += 1;
-      convert.XML_TO_JSON(pathUri);
+      convert.xmlToJSON(pathUri);
     }
   });
 

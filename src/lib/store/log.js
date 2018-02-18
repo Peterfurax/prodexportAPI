@@ -1,4 +1,11 @@
-// const fs = require("fs");
+/**
+ * Provides modules class...
+ * @module Store
+ * @class  log store
+ */
+
+
+ // const fs = require("fs");
 const l = (mess) => {
   console.log(mess);
 };

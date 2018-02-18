@@ -1,42 +1,53 @@
+/**
+ * Provides modules class...
+ * @module Actions
+ * @class Actions Files 
+ */
 const fs = require("fs");
-const date = require("../converteur/date")
-// const moment = require("moment")
-// entete nom de fichier pour export csv
-const exportNameCsv = "export_csv_";
-const horodatage = date.DateNowFile()
-const extentionCsv = ".csv";
+const date = require("../converteur/date");
 
 /**
- * [csvNameFile description]
- * @param {string} fileName [return un nom de fichier daté]
- * @return {string} fileName horodaté
+ * @private
+ * @method csvNameFile
+ * @description genere un nom de fichier horaodaté
+ * @returns {string} fileName horodaté
+ * 
  */
-const csvNameFile = fileName => {
-  return fileName + horodatage + extentionCsv;
+const csvNameFile = () => {
+  const exportNameCsv = "export_csv_";
+  const horodatage = date.DateNowFile();
+  const extentionCsv = ".csv";
+  return exportNameCsv + horodatage + extentionCsv;
 };
 
 /**
- * [WRITE_FILE description]
- * @param {string} file [Fichier]
- * @param {string} data  [Données]
+ *  
+ * @private
+ * @method writeFile
+ * @description ecrire un fichier sur le fs
+ * @param {string} uriFile uri du fichier à ecrire
+ * @param {string} data Données
+ * @returns {promise}
  */
-const WRITE_FILE = (file, data) => {
+const writeFile = (uriFile, data) => {
   return new Promise((resolve, reject) => {
-    fs.writeFile(file, data, err => {
+    fs.writeFile(uriFile, data, err => {
       if (err) reject(err);
-      resolve(file);
+      resolve(uriFile);
     });
   });
 };
 
 /**
- * [WRITE_FILE_CSV description]
- * @param {csv} csv [csv data]
- * @param {obj} err [err]
+ * @public
+ * @method writeFileCSV
+ * @description ecrire un fichier CSV sur le fs
+ * @param {string} csv csv data
+ * @returns {promise}
  */
-const WRITE_FILE_CSV = csv => {
+const writeFileCSV = csv => {
   return new Promise((resolve, reject) => {
-    WRITE_FILE(csvNameFile(exportNameCsv), csv)
+    writeFile(csvNameFile(), csv)
       .then(file => {
         resolve(file);
       })
@@ -47,18 +58,20 @@ const WRITE_FILE_CSV = csv => {
 };
 
 /**
- * [READ_FILE description]
- * @param {string} path [description]
- * @return {string} data [data read]
+ * @public
+ * @method readFile
+ * @description lecture d'un fichier sur le fs
+ * @param {string} uriFile uri du fichier à lire
+ * @return {string} string des données lu du fichier
  */
-const READ_FILE = path => {
-  fs.readFile(path, (err, data) => {
+const readFile = uriFile => {
+  fs.readFile(uriFile, (err, data) => {
     if (err) throw err;
     return data;
   });
 };
 
 module.exports = {
-  WRITE_FILE_CSV: WRITE_FILE_CSV,
-  READ_FILE: READ_FILE
+  writeFileCSV: writeFileCSV,
+  readFile: readFile
 };
