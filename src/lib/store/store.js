@@ -1,6 +1,7 @@
 const pathfinder = require("path");
-let ARR = { response: [] };
-
+const webProdexport = { response: [] };
+const date = require("../converteur/date");
+const stats = require("../store/stats");
 /**
  * fileTypeTest
  *
@@ -29,7 +30,12 @@ const extractFile = data => {
     if (data.length < 1) {
       reject("pas de fichiers");
     } else {
-      console.log(data.length + " FICHIERS A EXPORTER");
+      console.log(
+        date.DateNow(),
+        "IMPORTATION ========================>",
+        data.length,
+        "Fichiers importés"
+      );
       resolve(data);
     }
   });
@@ -47,9 +53,6 @@ const EXTRACT_DATA = (datedExport, id, data) => {
   objResult.datedExport = datedExport;
   objResult.id = id;
   extractFile(data.prodexport.file)
-    .catch(err => {
-      console.err(err);
-    })
     .then(fileList => {
       // TODO a reecrire trop moche le for
       objResult.files = {};
@@ -62,11 +65,16 @@ const EXTRACT_DATA = (datedExport, id, data) => {
           objResult.files.doc.push(fileList[i]);
         }
       }
-      ARR.response.push(objResult);
+      webProdexport.response.push(objResult);
+      stats.statsCount.exportCount += 1;
+      stats.statsCount.loidList.push(id);
+    })
+    .catch(err => {
+      console.error(err);
     });
 };
 
 module.exports = {
   EXTRACT_DATA: EXTRACT_DATA,
-  ARR: ARR
+  webProdexport: webProdexport
 };

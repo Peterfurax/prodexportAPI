@@ -3,16 +3,21 @@ const router = express.Router();
 const store = require("../store/store");
 const exporter = require("../actions/exporter");
 
-router.get("/web2web.json", (req, res) => {
-  res.json(store.ARR).status(200);
+const stats = require("../store/stats");
+router.get("/json", (req, res) => {
+  res.json(store.webProdexport).status(200);
 });
 
 router.get("/", (req, res) => {
   res.send("je suis en vie").status(200);
 });
 
+router.get("/stats", (req, res) => {
+  res.json(stats).status(200);
+});
+
+
 router.get("/csv", (req, res) => {
-  
   exporter
     .EXPORT_CSV()
     .then((filePath, file) => {

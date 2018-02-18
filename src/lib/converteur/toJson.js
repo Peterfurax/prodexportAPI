@@ -3,12 +3,13 @@ const fs = require("fs");
 const store = require("../store/store");
 const xml2json = require("xml2js");
 const pathFinder = require("path");
+const date = require("../converteur/date");
 
 /**
- * datedExport
+ * extract datedExport from path folder
  *
- * @param {any} path
- * @returns
+ * @param {string} path
+ * @returns {string} datedExportFolderWatched
  */
 const datedExport = path => {
   return pathFinder
@@ -18,10 +19,10 @@ const datedExport = path => {
 };
 
 /**
- * id
+ * extract id from path folder
  *
  * @param {any} path
- * @returns
+ * @returns IdExportFolderWatched
  */
 const id = path => {
   return pathFinder
@@ -33,18 +34,18 @@ const id = path => {
 /**
  * XML_TO_JSON
  *
- * @param {any} path
+ * @param {string} path path
  */
 const XML_TO_JSON = path => {
-  console.log(`TRAITEMENT ========================> ${path}`);
+  console.log(date.DateNow(),`TRAITEMENT  ========================> ${path}`);
   fs.readFile(path, (err, data) => {
-    console.log(`LECTURE    ========================> ${path}`);
+    console.log(date.DateNow(),`LECTURE     ========================> ${path}`);
     new xml2json.Parser().parseString(data, (err, result) => {
-      console.log(`CONVERTION ========================> ${path}`);
+      console.log(date.DateNow(), `CONVERTION  ========================> ${path}`);
       if (err) throw err;
-      console.log(`EXTRACTION ========================> ${path}`);
+      console.log(date.DateNow(), `EXTRACTION  ========================> ${path}`);
       store.EXTRACT_DATA(datedExport(path), id(path), result);
-      // console.log(`EXPORT     ========================> ${path}`)
+      // console.log(`EXPORT      ========================> ${path}`)
       // actions.JSON_TO_CSV(result)
     });
   });

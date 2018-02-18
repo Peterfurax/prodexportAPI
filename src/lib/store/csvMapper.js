@@ -1,7 +1,7 @@
 const store = require("./store");
 const convert = require("../actions/convert");
 const dateConverter = require("../converteur/date");
-// const data =  store.ARR;
+// const data =  store.webProdexport;
 // const sdvDateFormat = 'YYYYMMDDHHmmss';
 // momentDate.utc().format(sdvDateFormat)
 const MAPPING_TO_CSV = () => {
@@ -10,7 +10,7 @@ const MAPPING_TO_CSV = () => {
     let docs = [];
     // TODO gerer les dates
     // momentDate.utc().format(sdvDateFormat)
-    store.ARR.response.map(val => {
+    store.webProdexport.response.map(val => {
       // console.log(sys.loid[0])
       let doc = {};
       let file = val.files.doc[0];

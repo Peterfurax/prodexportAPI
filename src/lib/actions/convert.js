@@ -17,8 +17,8 @@ const JSON_TO_CSV = jsonData => {
   return new Promise((resolve, reject) => {
     toCsv
       .JSON_TO_CSV(jsonData)
-      .then(val => {
-        resolve(val);
+      .then(csv => {
+        resolve(csv);
       })
       .catch(err => {
         reject(err);

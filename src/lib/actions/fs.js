@@ -1,8 +1,9 @@
 const fs = require("fs");
+const date = require("../converteur/date")
 // const moment = require("moment")
 // entete nom de fichier pour export csv
 const exportNameCsv = "export_csv_";
-const horodatage = new Date().getTime();
+const horodatage = date.DateNowFile()
 const extentionCsv = ".csv";
 
 /**
@@ -33,7 +34,7 @@ const WRITE_FILE = (file, data) => {
  * @param {csv} csv [csv data]
  * @param {obj} err [err]
  */
-const WRITE_FILE_CSV = (csv) => {
+const WRITE_FILE_CSV = csv => {
   return new Promise((resolve, reject) => {
     WRITE_FILE(csvNameFile(exportNameCsv), csv)
       .then(file => {
