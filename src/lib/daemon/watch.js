@@ -7,13 +7,13 @@ const c = require("../store/log");
 
 const web2WebExt = "WEB2WEB";
 /**
- * WATCHER
- *  watch datingFolder for file and load xmlToJSON when file match fileToWatch
+ * @method FileWatcher
+ * @description watch datingFolder for file and load xmlToJSON when file match fileToWatch
  * @param {string} datingFolder exemple 20180131
  * @param {string} fileToWatch exemple prodexport.xml
  * @requires chokidar 
  */
-let WATCHER = (datingFolder, fileToWatch) => {
+let FileWatcher = (datingFolder, fileToWatch) => {
   c.l(
     date.DateNow() +
       " WEBTOCSV    ========================> DOSSIER " +
@@ -24,7 +24,7 @@ let WATCHER = (datingFolder, fileToWatch) => {
     persistent: true
   });
 /**
- * WATCHER ON
+ * FileWatcher ON
  * @author Pierre Montoya
  * @param {string} pathUri
  */
@@ -61,5 +61,5 @@ let WATCHER = (datingFolder, fileToWatch) => {
   // });
 };
 module.exports = {
-  WATCHER: WATCHER
+  FileWatcher: FileWatcher
 };

@@ -64,7 +64,7 @@ const xmlToJSON = path => {
         date.DateNow(),
         `EXTRACTION  ========================> ${path}`
       );
-      store.EXTRACT_DATA(datedExport(path), idExport(path), result);
+      store.ExtractDocs(datedExport(path), idExport(path), result);
     });
   });
 };

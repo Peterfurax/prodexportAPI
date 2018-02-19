@@ -19,7 +19,7 @@ stats.statsCount.dateLoading = dateFolder;
 /**
  * Lancement du server web
  */
-const webServer = require("./lib/socket/webServer");
+require("./lib/socket/webServer");
 /**
  * Lancement du daemon pour scruter dossier daté.
  */
@@ -30,4 +30,4 @@ const webServer = require("./lib/socket/webServer");
  * 
  */
 
-daemon.WATCHER("Web2Web\\" + dateFolder + "_WEB2WEB", "prodexport.xml");
+daemon.FileWatcher("Web2Web\\" + dateFolder + "_WEB2WEB", "prodexport.xml");

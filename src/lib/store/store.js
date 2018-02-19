@@ -25,11 +25,11 @@ const fileTypeTest = file => {
 };
 
 /**
- * extractFile
+ * extractDoc
  *
  * @param {any} data
  */
-const extractFile = data => {
+const AsDocsIN = data => {
   return new Promise((resolve, reject) => {
     if (data.length < 1) {
       reject("pas de fichiers");
@@ -46,32 +46,42 @@ const extractFile = data => {
 };
 
 /**
- * EXTRACT_DATA
- *
+ * @method storeData
+ * @description staore des les données dans l'array general
  * @param {string} datedExport
  * @param {string} id
- * @param {json} data
+ * @param {object} fileList
  */
-const EXTRACT_DATA = (datedExport, id, data) => {
+const storeData = (datedExport, id, docList) => {
+
   let objResult = {};
   objResult.datedExport = datedExport;
   objResult.id = id;
-  extractFile(data.prodexport.file)
-    .then(fileList => {
-      // TODO a reecrire trop moche le for
-      objResult.files = {};
-      objResult.files.graph = [];
-      objResult.files.doc = [];
-      for (var i = 0; i < fileList.length; i++) {
-        if (fileTypeTest(fileList[i].$.href) === "JPEG") {
-          objResult.files.graph.push(fileList[i]);
-        } else {
-          objResult.files.doc.push(fileList[i]);
-        }
-      }
-      webProdexport.response.push(objResult);
-      stats.statsCount.exportCount += 1;
-      stats.statsCount.loidList.push(id);
+  objResult.files = {};
+  objResult.files.graph = [];
+  objResult.files.doc = [];
+  docList.map(val => {
+    if (fileTypeTest(val.$.href) === "JPEG") {
+      objResult.files.graph.push(val);
+    } else {
+      objResult.files.doc.push(val)
+    }
+  });
+  webProdexport.response.push(objResult);
+  stats.statsCount.exportCount += 1;
+  stats.statsCount.loidList.push(objResult.id);
+};
+/**
+ * @method ExtractDocs
+ * @description Extrait les données venant d'un 
+ * @param {string} datedExport
+ * @param {string} id
+ * @param {object} data
+ */
+const ExtractDocs = (datedExport, id, data) => {
+  AsDocsIN(data.prodexport.file)
+    .then(docList => {
+      storeData(datedExport, id, docList);
     })
     .catch(err => {
       console.error(err);
@@ -79,6 +89,6 @@ const EXTRACT_DATA = (datedExport, id, data) => {
 };
 
 module.exports = {
-  EXTRACT_DATA: EXTRACT_DATA,
+  ExtractDocs: ExtractDocs,
   webProdexport: webProdexport
 };
