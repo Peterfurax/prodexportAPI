@@ -24,10 +24,8 @@ const MAPPING_TO_CSV = () => {
       let sys = metadata.sys[0];
       let props = sys.props[0];
       let productInfo = props.productInfo[0];
-      // let va = sys.va[0];
+      let va = sys.va[0];
       doc.loid = sys.loid[0];
-      // console.log(doc.loid, va.$)
-      // console.log(doc.loid, va.cteam)
       doc.uuid = sys.uuid[0];
       doc.type = sys.type[0];
       doc.path = sys.path[0];
@@ -43,11 +41,11 @@ const MAPPING_TO_CSV = () => {
       doc.name = productInfo.name[0];
       doc.issueDate = productInfo.issueDate[0];
       doc.templateName = props.templateName[0];
-      // doc.summary = props.summary[0];
       doc.charsCount = props.charsCount[0];
       doc.wordCount = props.wordCount[0];
       doc.workFolder = props.workFolder[0];
-      // doc.cteam = va.cteam[0] ? va.cteam[0] : "null";
+      doc.cteam = ('cteam' in va) ? va.cteam[0] : "null";
+      console.log(metadata)
       docs.push(doc);
       convert
         .JSON_TO_CSV(docs)
