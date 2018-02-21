@@ -28,6 +28,17 @@ const DateNow = () => {
 
 /**
  * @public
+ * @method DateConvertFromQM
+ * @description Convertie date now
+ * @return {string} "DD-MM-YYYY HH:mm:ss"
+ */
+const DateConvertFromQM = (dateQm) => {
+  return moment(dateQm,"YYYYMMDDHHmmss").format("DD-MM-YYYY HH:mm:ss:SS");
+};
+
+
+/**
+ * @public
  * @method unixDateToHuman
  * @description Convert unix date to human date
  * @param {number} unixDate
@@ -52,5 +63,6 @@ module.exports = {
   unixDateToHuman: unixDateToHuman,
   unixTimeToHuman: unixTimeToHuman,
   DateNow: DateNow,
-  DateNowFile: DateNowFile
+  DateNowFile: DateNowFile,
+  DateConvertFromQM:DateConvertFromQM
 };
