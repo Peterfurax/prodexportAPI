@@ -1,17 +1,15 @@
 /**
- * Provides modules class...
+* Provides modules ACTIONS
  * @module Actions
- * @class Actions Files 
+ * @class Actions Files
  */
 const fs = require("fs");
 const date = require("../converteur/date");
 
 /**
- * @private
  * @method csvNameFile
  * @description genere un nom de fichier horaodaté
  * @returns {string} fileName horodaté
- * 
  */
 const csvNameFile = () => {
   const exportNameCsv = "export_csv_";
@@ -21,8 +19,6 @@ const csvNameFile = () => {
 };
 
 /**
- *  
- * @private
  * @method writeFile
  * @description ecrire un fichier sur le fs
  * @param {string} uriFile uri du fichier à ecrire
@@ -39,7 +35,6 @@ const writeFile = (uriFile, data) => {
 };
 
 /**
- * @public
  * @method writeFileCSV
  * @description ecrire un fichier CSV sur le fs
  * @param {string} csv csv data
@@ -58,7 +53,6 @@ const writeFileCSV = csv => {
 };
 
 /**
- * @public
  * @method readFile
  * @description lecture d'un fichier sur le fs
  * @param {string} uriFile uri du fichier à lire

@@ -1,19 +1,17 @@
 /**
- * Provides modules class...
+* Provides modules Actions exporter
  * @module Actions
  * @class Actions exporter
  */
 
-const csvMapper = require("../store/csvMapper");
+const csvMapper = require("../mapper/csvMapper");
 const fileMan = require("../actions/fs");
 const date = require("../converteur/date");
 
 /**
- * @public
  * @method exportCSV
  * @description genere un nom de fichier horaodaté
  * @returns {promise} fileName horodaté
- * 
  */
 const exportCSV = () => {
   return new Promise((resolve, reject) => {

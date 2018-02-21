@@ -1,23 +1,31 @@
 /**
- * Provides modules class...
- * @module Store
- * @class  csv Matpper
+ * Provides modules to map data to csv field
+ * @module Mapper
+ * @class  csv Mapper
  */
-
-const store = require("./store");
-const convert = require("../actions/convert");
 const dateConverter = require("../converteur/date");
 
-const fileDbMetadata = metadata => {
-  let sys = "sys" in metadata ? metadataSys(metadata.sys[0]) : null;
+/**
+ * @method docDbMetadata
+ * @description extrait les metadadonnées docDbMetadata
+ * @param {object} metadata
+ * @return {object}
+ */
+const docDbMetadata = metadata => {
+  let sys = "sys" in metadata ? DbMetadataMetadataSys(metadata.sys[0]) : "";
   return sys;
 };
 
-const metadataSys = sys => {
+/**
+ * @method DbMetadataMetadataSys
+ * @description extrait les metadadonnées sys
+ * @param {object} sys
+ * @return {object}
+ */
+const DbMetadataMetadataSys = sys => {
   let props = sys.props[0];
   let productInfo = props.productInfo[0];
   let va = sys.va[0];
-  // console.log(productInfo);
   return {
     loid: "loid" in sys ? sys.loid[0] : "",
     uuid: "uuid" in sys ? sys.uuid[0] : "",
@@ -50,10 +58,16 @@ const metadataSys = sys => {
     charsCount: "charsCount" in props ? props.charsCount[0] : "",
     wordCount: "wordCount" in props ? props.wordCount[0] : "",
     workFolder: "workFolder" in props ? props.workFolder[0] : "",
-    cteam: "cteam" in va ? va.cteam[0] : null
+    cteam: "cteam" in va ? va.cteam[0] : ""
   };
 };
 
+/**
+ * @method compoundUserMetadataGeneral
+ * @description extrait les metadadonnées General
+ * @param {object} General
+ * @return {object}
+ */
 const compoundUserMetadataGeneral = General => {
   return {
     DocDescr: "DocDescr" in General ? General.DocDescr[0] : "",
@@ -64,6 +78,12 @@ const compoundUserMetadataGeneral = General => {
   };
 };
 
+/**
+ * @method compoundUserMetadataCustomer
+ * @description extrait les metadadonnées Customer
+ * @param {object} Customer
+ * @return {object}
+ */
 const compoundUserMetadataCustomer = Customer => {
   return {
     Authors: "Authors" in Customer ? Customer.Authors[0] : "",
@@ -80,6 +100,12 @@ const compoundUserMetadataCustomer = Customer => {
   };
 };
 
+/**
+ * @method compoundUserMetadataCustomer
+ * @description extrait les metadadonnées Print
+ * @param {object} Print
+ * @return {object}
+ */
 const compoundUserMetadataCustomerPrint = Print => {
   return {
     PrintDataType: "PrintDataType" in Print ? Print.PrintDataType[0] : "",
@@ -98,72 +124,91 @@ const compoundUserMetadataCustomerPrint = Print => {
       "PrintNextPageNumber" in Print ? Print.PrintNextPageNumber[0] : ""
   };
 };
-const WebCategoryExtract = WebCategory => {
+
+/**
+ * @method compoundUserMetadataCustomerWebCategoryExtract
+ * @description extrait les metadadonnées WebCategory
+ * @param {object} WebCategory
+ * @return {object}
+ */
+const compoundUserMetadataCustomerWebCategoryExtract = WebCategory => {
   return {
-    WebSource: "WebCaption" in WebCategory.WebSource[0] ? WebCategory.WebSource[0].WebCaption[0]:"",
-    WebSegment: "WebCaption" in WebCategory.WebSegment[0]?  WebCategory.WebSegment[0].WebCaption[0]:"",
-    WebTheme: "WebCaption" in WebCategory.WebTheme[0] ? WebCategory.WebTheme[0].WebCaption[0]:"",
+    WebSource:
+      "WebCaption" in WebCategory.WebSource[0]
+        ? WebCategory.WebSource[0].WebCaption[0]
+        : "",
+    WebSegment:
+      "WebCaption" in WebCategory.WebSegment[0]
+        ? WebCategory.WebSegment[0].WebCaption[0]
+        : "",
+    WebTheme:
+      "WebCaption" in WebCategory.WebTheme[0]
+        ? WebCategory.WebTheme[0].WebCaption[0]
+        : ""
     // WebSousSegment:"WebCaption" in WebCategory.WebSousSegment[0] ? WebCategory.WebSousSegment[0].WebCaption[0]:""
   };
 };
-
+/**
+ * @method compoundUserMetadataCustomerWeb
+ * @description extrait les metadadonnées Web
+ * @param {object} Web
+ * @return {object}
+ */
 const compoundUserMetadataCustomerWeb = Web => {
   return {
     WebObjId: "WebObjId" in Web ? Web.WebObjId[0] : "",
     WebType: "WebType" in Web ? Web.WebType[0] : "",
     WebPriority: "WebPriority" in Web ? Web.WebPriority[0] : "",
     WebPublicationDate:
-      "WebPublicationDate" in Web ? dateConverter.DateConvertFromQM(Web.WebPublicationDate[0]) : "",
+      "WebPublicationDate" in Web
+        ? dateConverter.DateConvertFromQM(Web.WebPublicationDate[0])
+        : "",
     WebRelegationDate:
-      "WebRelegationDate" in Web ? dateConverter.DateConvertFromQM(Web.WebRelegationDate[0]) : "",
+      "WebRelegationDate" in Web
+        ? dateConverter.DateConvertFromQM(Web.WebRelegationDate[0])
+        : "",
     WebUnpublicationDate:
-      "WebUnpublicationDate" in Web ? dateConverter.DateConvertFromQM(Web.WebUnpublicationDate[0]) : "",
-    WebDeletionDate: "WebDeletionDate" in Web ? dateConverter.DateConvertFromQM(Web.WebDeletionDate[0]) : "",
+      "WebUnpublicationDate" in Web
+        ? dateConverter.DateConvertFromQM(Web.WebUnpublicationDate[0])
+        : "",
+    WebDeletionDate:
+      "WebDeletionDate" in Web
+        ? dateConverter.DateConvertFromQM(Web.WebDeletionDate[0])
+        : "",
     WebCategory:
-      "WebCategory" in Web ? WebCategoryExtract(Web.WebCategory[0]) : ""
+      "WebCategory" in Web
+        ? compoundUserMetadataCustomerWebCategoryExtract(Web.WebCategory[0])
+        : ""
   };
 };
 
+/**
+ * @method compoundUserMetadataExtract
+ * @description extrait les metadadonnées Web
+ * @param {object} Metadata
+ * @return {object}
+ */
 const compoundUserMetadataExtract = Metadata => {
   return Object.assign(
     compoundUserMetadataGeneral(Metadata.General[0]),
     compoundUserMetadataCustomer(Metadata.Customer[0]),
-    // compoundUserMetadataCustomerPrint(Metadata.Customer[0].Print[0]),
+    compoundUserMetadataCustomerPrint(Metadata.Customer[0].Print[0]),
     compoundUserMetadataCustomerWeb(Metadata.Customer[0].Web[0])
   );
 };
 
-const MAPPING_TO_CSV = () => {
-  console.log("MAPPING_TO_CSV");
-  return new Promise((resolve, reject) => {
-    let docs = [];
-    store.webProdexport.response.map(val => {
-      let file = val.files.doc[0];
-      let metadataExtract =
-        "dbMetadata" in file ? fileDbMetadata(file.dbMetadata[0]) : null;
-      let compoundUserMetadata =
-        "compoundUserMetadata" in file.dbMetadata[0]
-          ? compoundUserMetadataExtract(
-            file.dbMetadata[0].compoundUserMetadata[0].Metadata[0]
-          )
-          : null;
-      let doc = Object.assign(metadataExtract, compoundUserMetadata);
-
-      // console.log(doc);
-      docs.push(doc);
-      convert
-        .JsonToCSV(docs)
-        .then(val => {
-          resolve(val);
-        })
-        .catch(err => {
-          if (err) console.log(err);
-          reject(err);
-        });
-    });
-  });
+const extractArt = doc => {
+  let metadataExtract =
+    "dbMetadata" in doc ? docDbMetadata(doc.dbMetadata[0]) : {};
+  let compoundUserMetadata =
+    "compoundUserMetadata" in doc.dbMetadata[0]
+      ? compoundUserMetadataExtract(
+          doc.dbMetadata[0].compoundUserMetadata[0].Metadata[0]
+        )
+      : compoundUserMetadataExtract();
+  return Object.assign(metadataExtract, compoundUserMetadata);
 };
 
 module.exports = {
-  MAPPING_TO_CSV: MAPPING_TO_CSV
+  extractArt: extractArt
 };

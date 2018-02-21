@@ -1,5 +1,5 @@
 /**
- * Provides modules class...
+ * Provides modules STORE
  * @module Store
  * @class  data Store
  */
@@ -8,13 +8,14 @@ const pathfinder = require("path");
 const webProdexport = { response: [] };
 const date = require("../converteur/date");
 const stats = require("../store/stats");
+
 /**
- * fileTypeTest
- *
- * @param {string} file a reecrire
+ * @method fileTypeTest
+ * @description test l'extension d'un path file
+ * @param {string} fileUriString
  */
-const fileTypeTest = file => {
-  switch (pathfinder.extname(file)) {
+const fileTypeTest = fileUriString => {
+  switch (pathfinder.extname(fileUriString)) {
     case ".JPEG":
       return "JPEG";
     case ".XML":
@@ -25,14 +26,14 @@ const fileTypeTest = file => {
 };
 
 /**
- * extractDoc
- *
- * @param {any} data
+ * @method AsDocsIN
+ * @description test la présence d'un article dans le fichier prodexport
+ * @param {object} data
  */
 const AsDocsIN = data => {
   return new Promise((resolve, reject) => {
     if (data.length < 1) {
-      reject("pas de fichiers");
+      reject("On passe ! Pas d'article dans le fichier");
     } else {
       console.log(
         date.DateNow(),

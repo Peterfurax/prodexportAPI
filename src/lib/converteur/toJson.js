@@ -1,7 +1,7 @@
 /**
  * Provides modules class...
- * @module Converter
- * @class Converter json
+ * @module Converteur
+ * @class Convert JSON
  */
 
 const fs = require("fs");
@@ -11,7 +11,6 @@ const pathFinder = require("path");
 const date = require("../converteur/date");
 
 /**
- * @private
  * @method datedExport
  * @description extrait la date à travers le nom du dossier
  * @param {string} path UriPath
@@ -25,7 +24,6 @@ const datedExport = path => {
 };
 
 /**
- * @private
  * @method idExport
  * @description extrait la date à travers le nom du dossier
  * @param {string} path UriPath
@@ -39,13 +37,11 @@ const idExport = path => {
 };
 
 /**
- * @public
  * @method xmlToJSON
  * @description extrait un fichier xml avec son URI
  * lecture, convertion, extration, inscription
  * dans le store
  * @param {string} path UriPath
- * @return {string} "3.1.012040001"
  */
 const xmlToJSON = path => {
   console.log(date.DateNow(), `TRAITEMENT  =====> ${path}`);
