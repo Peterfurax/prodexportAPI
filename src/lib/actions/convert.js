@@ -16,13 +16,15 @@ const xmlToJSON = xmlPath => {
 };
 
 /**
- * [JSON_TO_CSV description]
+ * [JsonToCSV description]
+ * @method JsonToCSV
  * @param {json} jsonData [données json a convetir vers CSV]
+ * @return {promise}
  */
-const JSON_TO_CSV = jsonData => {
+const JsonToCSV = jsonData => {
   return new Promise((resolve, reject) => {
     toCsv
-      .JSON_TO_CSV(jsonData)
+      .JsonToCSV(jsonData)
       .then(csv => {
         resolve(csv);
       })
@@ -34,5 +36,5 @@ const JSON_TO_CSV = jsonData => {
 
 module.exports = {
   xmlToJSON: xmlToJSON,
-  JSON_TO_CSV: JSON_TO_CSV
+  JsonToCSV: JsonToCSV
 };

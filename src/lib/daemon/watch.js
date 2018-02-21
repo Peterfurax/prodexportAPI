@@ -1,6 +1,6 @@
 const pathfinder = require("path");
 const convert = require("../actions/convert");
-const chokidar = require("chokidar"); // from https://github.com/paulmillr/chokidar
+const chokidar = require("chokidar");
 const date = require("../converteur/date");
 const stats = require("../store/stats");
 const c = require("../store/log");
@@ -11,23 +11,19 @@ const web2WebExt = "WEB2WEB";
  * @description watch datingFolder for file and load xmlToJSON when file match fileToWatch
  * @param {string} datingFolder exemple 20180131
  * @param {string} fileToWatch exemple prodexport.xml
- * @requires chokidar 
+ * @requires chokidar https://github.com/paulmillr/chokidar
  */
 let FileWatcher = (datingFolder, fileToWatch) => {
-  c.l(
-    date.DateNow() +
-      " WEBTOCSV    ========================> DOSSIER " +
-      datingFolder
-  );
+  c.l(date.DateNow() + " WEBTOCSV    =====> DOSSIER " + datingFolder);
   var watcher = chokidar.watch(datingFolder, {
     ignored: /(^|[\/\\])\../,
     persistent: true
   });
-/**
- * FileWatcher ON
- * @author Pierre Montoya
- * @param {string} pathUri
- */
+  /**
+   * FileWatcher ON
+   * @author Pierre Montoya
+   * @param {string} pathUri
+   */
   watcher.on("add", pathUri => {
     stats.statsCount.FolderCount += 1;
     let isWeb2WebFolder = pathUri.split(pathfinder.sep)[1].split("_")[1];
@@ -47,11 +43,7 @@ let FileWatcher = (datingFolder, fileToWatch) => {
     // .on("unlinkDir", path => console.log(`Directory ${path} has been removed`))
     .on("error", error => console.log(`Watcher error: ${error}`))
     .on("ready", () => {
-      c.l(
-        date.DateNow() +
-          " SCANNING ON ========================> DOSSIER " +
-          datingFolder
-      );
+      c.l(date.DateNow() + " SCANNING ON =====> DOSSIER " + datingFolder);
       // var watchedPaths = watcher.getWatched();
       // console.log(watchedPaths)
     });

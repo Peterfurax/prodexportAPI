@@ -36,7 +36,7 @@ const AsDocsIN = data => {
     } else {
       console.log(
         date.DateNow(),
-        "IMPORTATION ========================>",
+        "IMPORTATION =====>",
         data.length,
         "Fichiers importés"
       );
@@ -53,7 +53,6 @@ const AsDocsIN = data => {
  * @param {object} fileList
  */
 const storeData = (datedExport, id, docList) => {
-
   let objResult = {};
   objResult.datedExport = datedExport;
   objResult.id = id;
@@ -64,7 +63,7 @@ const storeData = (datedExport, id, docList) => {
     if (fileTypeTest(val.$.href) === "JPEG") {
       objResult.files.graph.push(val);
     } else {
-      objResult.files.doc.push(val)
+      objResult.files.doc.push(val);
     }
   });
   webProdexport.response.push(objResult);
@@ -73,7 +72,7 @@ const storeData = (datedExport, id, docList) => {
 };
 /**
  * @method ExtractDocs
- * @description Extrait les données venant d'un 
+ * @description Extrait les données venant d'un
  * @param {string} datedExport
  * @param {string} id
  * @param {object} data

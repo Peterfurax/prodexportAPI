@@ -5,36 +5,37 @@
  */
 const jsontocsv = require("json-2-csv"); // https://www.npmjs.com/package/json-2-csv
 
-
 /**
  * @public
- * @method JSON_TO_CSV
+ * @method JsonToCSV
  * @description convert json data to csv with json2csv lib
  * @param {json} json
  */
-const JSON_TO_CSV = json => {
+const JsonToCSV = json => {
   return new Promise((resolve, reject) => {
-    const json2csvCallback = (err, csv) => {
-      if (err) reject(err);
-      resolve(csv);
-    };
-    const options_JSON_TO_CSV = {
-      delimiter: {
-        wrap: '"', // Double Quote (") character
-        field: ";", // Comma field delimiter
-        array: ",", // Semicolon array value delimiter
-        eol: "\n" // Newline delimiter
+    jsontocsv.json2csv(
+      json,
+      (err, csv) => {
+        if (err) reject(err);
+        resolve(csv);
       },
-      prependHeader: true,
-      sortHeader: false,
-      trimHeaderValues: true,
-      trimFieldValues: true,
-      checkSchemaDifferences: false
-    };
-    jsontocsv.json2csv(json, json2csvCallback, options_JSON_TO_CSV);
+      {
+        delimiter: {
+          wrap: '"', // Double Quote (") character
+          field: ";", // Comma field delimiter
+          array: ",", // Semicolon array value delimiter
+          eol: "\n" // Newline delimiter
+        },
+        prependHeader: true,
+        sortHeader: false,
+        trimHeaderValues: true,
+        trimFieldValues: true,
+        checkSchemaDifferences: false
+      }
+    );
   });
 };
 
 module.exports = {
-  JSON_TO_CSV: JSON_TO_CSV
+  JsonToCSV: JsonToCSV
 };
