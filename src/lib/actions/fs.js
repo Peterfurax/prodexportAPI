@@ -9,7 +9,7 @@ const date = require("../converteur/date");
 /**
  * @method csvNameFile
  * @description genere un nom de fichier horaodaté
- * @returns {string} fileName horodaté
+ * @return {string} fileName horodaté
  */
 const csvNameFile = () => {
   const exportNameCsv = "export_csv_";
@@ -23,7 +23,7 @@ const csvNameFile = () => {
  * @description ecrire un fichier sur le fs
  * @param {string} uriFile uri du fichier à ecrire
  * @param {string} data Données
- * @returns {promise}
+ * @return {promise}
  */
 const writeFile = (uriFile, data) => {
   return new Promise((resolve, reject) => {
@@ -38,7 +38,7 @@ const writeFile = (uriFile, data) => {
  * @method writeFileCSV
  * @description ecrire un fichier CSV sur le fs
  * @param {string} csv csv data
- * @returns {promise}
+ * @return {promise}
  */
 const writeFileCSV = csv => {
   return new Promise((resolve, reject) => {

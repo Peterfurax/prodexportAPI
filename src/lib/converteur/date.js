@@ -43,7 +43,7 @@ const unixDateToHuman = unixDate => {
 };
 
 /**
- * @method unixDateToHuman
+ * @method unixTimeToHuman
  * @description Convert unix time to human time "HH:mm:ss"
  * @param {number} unixDate
  * @return {string} "24:00:00"

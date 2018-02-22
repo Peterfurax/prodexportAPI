@@ -7,6 +7,7 @@
 const store = require("../store/store");
 const convert = require("../actions/convert");
 const article = require("./article");
+const photo = require("./photo");
 
 /**
  * @method MAPPING_TO_CSV
@@ -18,6 +19,7 @@ const MAPPING_TO_CSV = () => {
   return new Promise((resolve, reject) => {
     let docs = [];
     store.webProdexport.response.map(val => {
+      photo.extractPho(val.files.graph)
       docs.push(article.extractArt(val.files.doc[0]));
       convert
         .JsonToCSV(docs)

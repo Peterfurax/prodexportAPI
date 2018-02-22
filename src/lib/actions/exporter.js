@@ -11,7 +11,7 @@ const date = require("../converteur/date");
 /**
  * @method exportCSV
  * @description genere un nom de fichier horaodaté
- * @returns {promise} fileName horodaté
+ * @return {promise} fileName horodaté
  */
 const exportCSV = () => {
   return new Promise((resolve, reject) => {

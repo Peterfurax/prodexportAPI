@@ -4,7 +4,7 @@
   "description": "",
   "main": "serveur.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nyc --reporter=html --reporter=text --reporter=text-summary mocha ./src/**/**/**/*.test.js -r chai/register-expect",
     "start": "node ./src/app.js",
     "dev": "nodemon ./src/app.js"
   },
