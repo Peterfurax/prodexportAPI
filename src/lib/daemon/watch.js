@@ -1,7 +1,7 @@
 /**
- * Provides modules to map data to csv field
- * @module Daemon
- * @class  watch daemon
+ * Provides modules DAEMON watch
+ * @module DAEMON
+ * @class  DAEMON watch
  */
 
 const pathfinder = require("path");

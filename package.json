@@ -2,15 +2,20 @@
   "name": "scanprod",
   "version": "1.0.0",
   "description": "",
-  "main": "serveur.js",
+  "main": "./src/app.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text --reporter=text-summary mocha ./src/**/**/**/*.test.js -r chai/register-expect",
-    "start": "node ./src/app.js",
-    "dev": "nodemon ./src/app.js"
+    "test": "nyc --reporter=html --reporter=text --reporter=text-summary mocha ./test/**/**/**/*.specs.js -r chai/register-expect",
+    "doc": "yuidoc",
+    "start": "node ./build/backend.js",
+    "build": "npx webpack --display-error-details",
+    "dev": "nodemon ./src/app.js",
+    "compte" : "powershell -Command '(gci -include /src/*.js -recurse | select-string .).Count'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
     "chokidar": "^2.0.0",
     "compression": "^1.7.1",
     "express": "^4.16.2",
@@ -20,8 +25,11 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "webpack": "^3.11.0",
-    "eslint": "^4.17.0"
+    "babel-loader": "^8.0.0-beta.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.17.0",
+    "mocha": "^5.0.1",
+    "nyc": "^11.4.1",
+    "webpack": "^3.11.0"
   }
 }

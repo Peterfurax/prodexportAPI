@@ -1,12 +1,11 @@
 /**
- * Provides modules class...
- * @module Store
- * @class  log store
+ * Provides modules STORE log
+ * @module STORE
+ * @class  STORE log
  */
 
-
- // const fs = require("fs");
-const l = (mess) => {
+// const fs = require("fs");
+const l = mess => {
   console.log(mess);
 };
 

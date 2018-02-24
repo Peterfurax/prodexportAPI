@@ -1,7 +1,8 @@
 /**
- * Provides modules class...
- * @module Converteur
- * @class Convert CSV
+ * Provides modules CONVERTER CSV
+ * @module CONVERTER
+ * @class CONVERTER csv
+ * @constructor
  */
 const jsontocsv = require("json-2-csv"); // https://www.npmjs.com/package/json-2-csv
 

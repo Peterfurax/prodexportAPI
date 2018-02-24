@@ -12,7 +12,5 @@ if (args.length > 0) {
 }
 stats.statsCount.dateLoading = dateFolder;
 
-
-require("./lib/socket/webServer");
-
 daemon.FileWatcher("Web2Web\\" + dateFolder + "_WEB2WEB", "prodexport.xml");
+require("./lib/socket/webServer");

@@ -1,9 +1,9 @@
 {
-  "name": "YUIDoc",
-  "description": "YUIDoc documentation tool written in JavaScript",
-  "version": "0.2.38",
-  "url": "http://yuilibrary.com/projects/yuidoc",
-  "logo": "http://yuilibrary.com/img/yui-logo.png",
+  "name": "WEBEXPORT TO CSV",
+  "description": "Documentation de l'api",
+  "version": "0.0.1",
+  "url": "https://www.lesechos.fr/",
+  "logo": "https://assets.lesechos.com/lesechos/pics-news/images/logo-lesechos.svg",
   "options": {
     "linkNatives": "true",
     "attributesEmit": "true",

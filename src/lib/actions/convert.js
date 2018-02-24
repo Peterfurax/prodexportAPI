@@ -1,7 +1,7 @@
 /**
- * Provides modules ACTIONS
- * @module Actions
- * @class  Actions Convert
+ * Provides modules ACTIONS Convert
+ * @module ACTIONS
+ * @class  ACTIONS Convert
  */
 
 const toCsv = require("../converteur/toCsv");
@@ -9,7 +9,7 @@ const toJson = require("../converteur/toJson");
 
 /**
  * @method xmlToJSON
- * @description convertie un fichier xml en json
+ * @description convertir un fichier xml en json
  * @param {string} xmlPath [uri du fichier xml a convertir]
  */
 const xmlToJSON = xmlPath => {
@@ -18,7 +18,7 @@ const xmlToJSON = xmlPath => {
 
 /**
  * @method JsonToCSV
- * @description json a convetir vers CSV
+ * @description jsonData a convertir vers CSV
  * @param {json} jsonData données json a convetir vers CSV
  * @return {promise}
  */

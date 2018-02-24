@@ -1,7 +1,7 @@
 /**
- * Provides modules dates
- * @module Converteur
- * @class Convert Date
+ * Provides modules CONVERTER date
+ * @module CONVERTER
+ * @class CONVERTER date
  */
 const moment = require("moment"); // https://momentjs.com/docs/
 

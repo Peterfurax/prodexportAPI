@@ -1,7 +1,7 @@
 /**
- * Provides modules to map data to csv field
- * @module Mapper
- * @class  csv Mapper
+ * Provides modules MAPPER article
+ * @module MAPPER
+ * @class  MAPPER article
  */
 const dateConverter = require("../converteur/date");
 

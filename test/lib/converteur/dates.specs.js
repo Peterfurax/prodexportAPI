@@ -1,7 +1,8 @@
-const date = require("../date");
-// const chai = require("chai");
-// var expect = chai.expect;
-describe("date", () => {
+const date = require("../../../src/lib/converteur/date");
+describe("Date Converter", () => {
+  it("DateNowFile", () => {
+    expect(date.DateNowFile()).to.have.lengthOf(8);
+  });
   it("DateConvertFromQM", () => {
     expect(date.DateConvertFromQM(20180112152501)).equal("12-01-2018 15:25:01");
   });

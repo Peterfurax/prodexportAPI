@@ -1,7 +1,7 @@
 /**
-* Provides modules ACTIONS
- * @module Actions
- * @class Actions Files
+* Provides modules ACTIONS files
+ * @module ACTIONS
+ * @class ACTIONS Files
  */
 const fs = require("fs");
 const date = require("../converteur/date");

@@ -1,9 +1,10 @@
 /**
- * Provides modules to map data to csv field phto
- * @module Mapper
- * @class  csv Mapper
+ * Provides modules MAPPER photo
+ * @module MAPPER
+ * @class  MAPPER photo
  */
 const dateConverter = require("../converteur/date");
+
 /**
  * @method DbMetadataMetadataSys
  * @description extrait les metadadonnées sys
@@ -14,7 +15,9 @@ const phoDbMetadataMetadataSys = sys => {
   let props = sys.props[0];
   let productInfo = props.productInfo[0];
   let va = sys.va[0];
+  console.log(sys.path[0]);
   return {
+    loidArticle: "loidArticle" in sys ? sys.loidArticle[0] : "",
     loid: "loid" in sys ? sys.loid[0] : "",
     uuid: "uuid" in sys ? sys.uuid[0] : "",
     type: "type" in sys ? sys.type[0] : "",
@@ -57,26 +60,19 @@ const phoDbMetadata = metadata => {
   return sys;
 };
 
+/**
+ * @method extractPho
+ * @description genere array retour d'extraction
+ * @param {any} docs
+ * @returns {array}
+ */
 const extractPho = docs => {
-  // console.log(docs)
-  docs.map(doc=>{
-    let metadataExtract =
-    "dbMetadata" in doc ? phoDbMetadata(doc.dbMetadata[0]) : {};
-    console.log(metadataExtract)
-
-  })
-
-
-
-//   let metadataExtract =
-//     "dbMetadata" in doc ? docDbMetadata(doc.dbMetadata[0]) : {};
-//   let compoundUserMetadata =
-//     "compoundUserMetadata" in doc.dbMetadata[0]
-//       ? compoundUserMetadataExtract(
-//           doc.dbMetadata[0].compoundUserMetadata[0].Metadata[0]
-//         )
-//       : compoundUserMetadataExtract();
-//   return Object.assign(metadataExtract, compoundUserMetadata);
+  let graph = [];
+  docs.map(doc => {
+    let metadata = "dbMetadata" in doc ? phoDbMetadata(doc.dbMetadata[0]) : {};
+    graph.push(metadata);
+  });
+  return graph;
 };
 
 module.exports = {

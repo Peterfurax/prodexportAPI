@@ -1,7 +1,7 @@
 /**
- * Provides modules class...
- * @module Converteur
- * @class Convert JSON
+ * Provides modules CONVERTER JSON
+ * @module CONVERTER
+ * @class CONVERTER json
  */
 
 const fs = require("fs");
@@ -25,7 +25,7 @@ const datedExport = path => {
 
 /**
  * @method idExport
- * @description extrait la date à travers le nom du dossier
+ * @description extrait id à travers le nom du dossier
  * @param {string} path UriPath
  * @return {string} "3.1.012040001"
  */
@@ -44,11 +44,13 @@ const idExport = path => {
  * @param {string} path UriPath
  */
 const xmlToJSON = path => {
+  console.log(path)
   console.log(date.DateNow(), `TRAITEMENT  =====> ${path}`);
   fs.readFile(path, (err, data) => {
     console.log(date.DateNow(), `LECTURE     =====> ${path}`);
     new xml2json.Parser().parseString(data, (err, result) => {
       console.log(date.DateNow(), `CONVERTION  =====> ${path}`);
+      console.log(err)
       if (err) throw err;
       console.log(date.DateNow(), `EXTRACTION  =====> ${path}`);
       store.ExtractDocs(datedExport(path), idExport(path), result);
@@ -57,5 +59,7 @@ const xmlToJSON = path => {
 };
 
 module.exports = {
-  xmlToJSON: xmlToJSON
+  xmlToJSON: xmlToJSON,
+  idExport:idExport,
+  datedExport: datedExport
 };

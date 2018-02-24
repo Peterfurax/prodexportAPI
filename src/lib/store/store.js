@@ -1,7 +1,7 @@
 /**
- * Provides modules STORE
- * @module Store
- * @class  data Store
+ * Provides modules STORE data
+ * @module STORE
+ * @class  STORE data
  */
 
 const pathfinder = require("path");
@@ -48,7 +48,7 @@ const AsDocsIN = data => {
 
 /**
  * @method storeData
- * @description staore des les données dans l'array general
+ * @description store des les données dans l'array general
  * @param {string} datedExport
  * @param {string} id
  * @param {object} fileList
@@ -73,7 +73,7 @@ const storeData = (datedExport, id, docList) => {
 };
 /**
  * @method ExtractDocs
- * @description Extrait les données venant d'un
+ * @description Extrait les données venant d'un prodexport
  * @param {string} datedExport
  * @param {string} id
  * @param {object} data
