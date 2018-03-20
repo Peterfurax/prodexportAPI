@@ -15,7 +15,7 @@ const phoDbMetadataMetadataSys = sys => {
   let props = sys.props[0];
   let productInfo = props.productInfo[0];
   let va = sys.va[0];
-  console.log(sys.path[0]);
+  // console.log(sys.path[0]);
   return {
     loidArticle: "loidArticle" in sys ? sys.loidArticle[0] : "",
     loid: "loid" in sys ? sys.loid[0] : "",

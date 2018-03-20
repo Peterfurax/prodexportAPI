@@ -198,6 +198,7 @@ const compoundUserMetadataExtract = Metadata => {
 };
 
 const extractArt = doc => {
+  console.log(doc)
   let metadataExtract =
     "dbMetadata" in doc ? docDbMetadata(doc.dbMetadata[0]) : {};
   let compoundUserMetadata =

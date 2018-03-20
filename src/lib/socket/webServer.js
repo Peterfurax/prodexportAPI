@@ -9,6 +9,7 @@ const bodyParser = require("body-parser");
 const compression = require("compression");
 const port = process.env.PORT || 4001;
 const routes = require("../routes/index");
+const cors = require("cors");
 
 /**
 * Configure `app` to use `express()` 
@@ -16,6 +17,7 @@ const routes = require("../routes/index");
 * @type {function}
 */
 const app = express();
+app.use(cors());
 /**
 * Configure `app` to use `routes` 
 * @property route
