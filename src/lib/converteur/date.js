@@ -52,10 +52,26 @@ const unixTimeToHuman = unixDate => {
   return moment.unix(unixDate).format("HH:mm:ss");
 };
 
+const utcToLocalHeure = utcDate => {
+  return moment
+    .utc(utcDate)
+    .local()
+    .format("HH:mm:ss");
+};
+
+const utcToLocalDate = utcDate => {
+  return moment
+    .utc(utcDate)
+    .local()
+    .format("YYYY-MM-DD");
+};
+
 module.exports = {
   unixDateToHuman: unixDateToHuman,
   unixTimeToHuman: unixTimeToHuman,
   DateNow: DateNow,
   DateNowFile: DateNowFile,
-  DateConvertFromQM: DateConvertFromQM
+  DateConvertFromQM: DateConvertFromQM,
+  utcToLocalHeure: utcToLocalHeure,
+  utcToLocalDate: utcToLocalDate
 };

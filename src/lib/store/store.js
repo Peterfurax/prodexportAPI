@@ -18,7 +18,7 @@ const fileTypeTest = fileUriString => {
   switch (pathfinder.extname(fileUriString)) {
     case ".JPEG":
       return "JPEG";
-    case ".XML":
+    case ".xml":
       return "XML";
     default:
       return "INCONNU";
@@ -32,6 +32,7 @@ const fileTypeTest = fileUriString => {
  */
 const AsDocsIN = data => {
   return new Promise((resolve, reject) => {
+    // console.log(data);
     if (data.length < 1) {
       reject("On passe ! Pas d'article dans le fichier");
     } else {
@@ -53,19 +54,27 @@ const AsDocsIN = data => {
  * @param {string} id
  * @param {object} fileList
  */
-const storeData = (datedExport, id, docList) => {
+const storeData = (datedExport, heureExport, id, docList) => {
   let objResult = {};
   objResult.datedExport = datedExport;
+  objResult.heureExport = heureExport;
   objResult.id = id;
   objResult.files = {};
   objResult.files.graph = [];
   objResult.files.doc = [];
   docList.map(val => {
-    if (fileTypeTest(val.$.href) === "JPEG") {
-      objResult.files.graph.push(val);
-    } else {
-      objResult.files.doc.push(val);
+    // console.log(fileTypeTest(val.$.href))
+    if (fileTypeTest(val.$.href) === "JPEG") objResult.files.graph.push(val);
+    if (fileTypeTest(val.$.href) === "XML") objResult.files.doc.push(val);
+    if (fileTypeTest(val.$.href) === "INCONNU") {
+      console.log("ERRRRRRRRRRRRRRRRRRRRRRRORRRRRRRRRRRRRRRRR INPORT ");
+      return;
     }
+
+    // else {
+    //   // console.log(val.$)
+    //   objResult.files.doc.push(val);
+    // }
   });
   webProdexport.response.push(objResult);
   stats.statsCount.exportCount += 1;
@@ -78,10 +87,12 @@ const storeData = (datedExport, id, docList) => {
  * @param {string} id
  * @param {object} data
  */
-const ExtractDocs = (datedExport, id, data) => {
+const ExtractDocs = (datedExport, heureExport, id, data) => {
+  // console.log(data)
+  if (!data) return;
   AsDocsIN(data.prodexport.file)
     .then(docList => {
-      storeData(datedExport, id, docList);
+      storeData(datedExport, heureExport, id, docList);
     })
     .catch(err => {
       console.error(err);

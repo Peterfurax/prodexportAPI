@@ -35,10 +35,37 @@ const MAPPING_TO_CSV = () => {
     let graphs = [];
     let graphsTrait = [];
     store.webProdexport.response.map(val => {
+      console.log(val.files.graph[0]);
+      // if (!val.files.doc[0]) {%
+      //   return;
+      // } else {
+      //   val.files.doc[0].datedExport = val.datedExport;
+      //   val.files.doc[0].heureExport = val.heureExport;
+      //   doc.push(article.extractArt(val.files.doc[0]));
+      //   val.files.graph.map(graph => {
+      //     graph.dbMetadata[0].sys[0].loidArticle =
+      //       val.files.doc[0].dbMetadata[0].sys[0].loid;
+      //     graph.dbMetadata[0].sys[0].datedExport = val.datedExport;
+      //     graph.dbMetadata[0].sys[0].heureExport = val.heureExport;
+      //     graphs.push(graph);
+      //   });
+      //   graphsTrait = photo.extractPho(graphs);
+      // }
+      if (val.files.doc[0]) {
+        val.files.doc[0].datedExport = val.datedExport;
+        val.files.doc[0].heureExport = val.heureExport;
+      }
+
       doc.push(article.extractArt(val.files.doc[0]));
       val.files.graph.map(graph => {
-        graph.dbMetadata[0].sys[0].loidArticle =
-          val.files.doc[0].dbMetadata[0].sys[0].loid;
+        if (val.files.doc[0]) {
+          graph.dbMetadata[0].sys[0].loidArticle =
+            val.files.doc[0].dbMetadata[0].sys[0].loid;
+        }
+        // graph.dbMetadata[0].sys[0].loidArticle =
+        //   val.files.doc[0].dbMetadata[0].sys[0].loid;
+        graph.dbMetadata[0].sys[0].datedExport = val.datedExport;
+        graph.dbMetadata[0].sys[0].heureExport = val.heureExport;
         graphs.push(graph);
       });
       graphsTrait = photo.extractPho(graphs);

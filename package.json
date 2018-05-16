@@ -1,7 +1,7 @@
 {
   "name": "scanprod",
   "version": "1.0.0",
-  "description": "api",
+  "description": "https://stackoverflow.com/questions/22475849/node-js-error-enospc",
   "main": "./src/app.js",
   "scripts": {
     "test": "nyc --reporter=html --reporter=text --reporter=text-summary mocha ./test/**/**/**/*.specs.js -r chai/register-expect",

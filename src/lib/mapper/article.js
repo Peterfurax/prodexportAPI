@@ -85,12 +85,21 @@ const compoundUserMetadataGeneral = General => {
  * @return {object}
  */
 const compoundUserMetadataCustomer = Customer => {
+  console.log(Customer.Authors[0])
+  if (!Customer.Authors[0]) {
+    console.log("PAS DE CUSTOMER")
+    return { Authors: "", Product: "" };
+  }
+  // console.log("Customer", Customer);
+  // console.log(Customer);
+  // Authors: "Author" in Customer.Authors ? Customer.Authors[0].Author[0] : "",
   return {
-    Authors: "Authors" in Customer ? Customer.Authors[0] : "",
+    Authors: "Author" in Customer.Authors[0] ? Customer.Authors[0].Author[0] : "",
+    // Authors: Customer.Authors[0].Author[0],
     Product: "Product" in Customer ? Customer.Product[0] : ""
-    // Geographies: "Geographies" in Customer ? Customer.Geographies[0] : "",
-    // Companies: "Companies" in Customer ? Customer.Companies[0] : "",
-    // Keywords: "Keywords" in Customer ? Customer.Keywords[0] : "",
+    // Geographies: "Geography" in Customer.Geographies[0] ? Customer.Geographies[0].Geography : "",
+    // Companies: "Company" in Customer.Companies[0] ? Customer.Companies[0].Company : "",
+    // Keywords: "Keyword" in Customer ? Customer.Keywords[0] : "",
     // SecondaryHeader:
     //   "SecondaryHeader" in Customer ? Customer.SecondaryHeader[0] : "",
     // DocKeywordTheme: "Keywords" in Customer ? Customer.DocKeywordTheme[0] : "",
@@ -101,27 +110,27 @@ const compoundUserMetadataCustomer = Customer => {
 };
 
 /**
- * @method compoundUserMetadataCustomer
+ * @method compoundUserMetadataCustomerPrint
  * @description extrait les metadadonnées Print
  * @param {object} Print
  * @return {object}
  */
 const compoundUserMetadataCustomerPrint = Print => {
   return {
-    PrintDataType: "PrintDataType" in Print ? Print.PrintDataType[0] : "",
-    PrintMedia: "PrintMedia" in Print ? Print.PrintMedia[0] : "",
-    PrintMediaLabel: "PrintMediaLabel" in Print ? Print.PrintMediaLabel[0] : "",
-    PrintSegment: "PrintSegment" in Print ? Print.PrintSegment[0] : "",
-    PrintSousSegment:
-      "PrintSousSegment" in Print ? Print.PrintSousSegment[0] : "",
-    PrintTheme: "PrintTheme" in Print ? Print.PrintTheme[0] : "",
-    PrintIssueNumber:
-      "PrintIssueNumber" in Print ? Print.PrintIssueNumber[0] : "",
-    PrintPageNumber: "PrintPageNumber" in Print ? Print.PrintPageNumber[0] : "",
-    PrintSequenceNumber:
-      "PrintSequenceNumber" in Print ? Print.PrintSequenceNumber[0] : "",
-    PrintNextPageNumber:
-      "PrintNextPageNumber" in Print ? Print.PrintNextPageNumber[0] : ""
+    // PrintDataType: "PrintDataType" in Print ? Print.PrintDataType[0] : "",
+    // PrintMedia: "PrintMedia" in Print ? Print.PrintMedia[0] : "",
+    // PrintMediaLabel: "PrintMediaLabel" in Print ? Print.PrintMediaLabel[0] : "",
+    // PrintSegment: "PrintSegment" in Print ? Print.PrintSegment[0] : "",
+    // PrintSousSegment:
+    //   "PrintSousSegment" in Print ? Print.PrintSousSegment[0] : "",
+    // PrintTheme: "PrintTheme" in Print ? Print.PrintTheme[0] : "",
+    // PrintIssueNumber:
+    //   "PrintIssueNumber" in Print ? Print.PrintIssueNumber[0] : "",
+    // PrintPageNumber: "PrintPageNumber" in Print ? Print.PrintPageNumber[0] : "",
+    // PrintSequenceNumber:
+    //   "PrintSequenceNumber" in Print ? Print.PrintSequenceNumber[0] : "",
+    // PrintNextPageNumber:
+    //   "PrintNextPageNumber" in Print ? Print.PrintNextPageNumber[0] : ""
   };
 };
 
@@ -132,6 +141,12 @@ const compoundUserMetadataCustomerPrint = Print => {
  * @return {object}
  */
 const compoundUserMetadataCustomerWebCategoryExtract = WebCategory => {
+  if (!WebCategory.WebSource[0]) return {};
+  if (!WebCategory.WebSegment[0]) return {};
+  if (!WebCategory.WebTheme[0]) return {};
+
+  if (!WebCategory) return {};
+  // console.log(WebCategory)
   return {
     WebSource:
       "WebCaption" in WebCategory.WebSource[0]
@@ -189,16 +204,52 @@ const compoundUserMetadataCustomerWeb = Web => {
  * @return {object}
  */
 const compoundUserMetadataExtract = Metadata => {
-  return Object.assign(
-    compoundUserMetadataGeneral(Metadata.General[0]),
-    compoundUserMetadataCustomer(Metadata.Customer[0]),
-    compoundUserMetadataCustomerPrint(Metadata.Customer[0].Print[0]),
-    compoundUserMetadataCustomerWeb(Metadata.Customer[0].Web[0])
-  );
+  if (!Metadata) return {};
+  // console.log("Metadata", Metadata);
+  let a =
+    "General" in Metadata
+      ? compoundUserMetadataGeneral(Metadata.General[0])
+      : {};
+  let b =
+    "Customer" in Metadata
+      ? compoundUserMetadataCustomer(Metadata.Customer[0])
+      : {};
+  let c =
+    "Print" in Metadata.Customer[0]
+      ? compoundUserMetadataCustomerPrint(Metadata.Customer[0].Print[0])
+      : {};
+  let d =
+    "Web" in Metadata.Customer[0]
+      ? compoundUserMetadataCustomerWeb(Metadata.Customer[0].Web[0])
+      : {};
+  // console.log("a", a);
+  // console.log("b", b);
+  // console.log("c", c);
+  // console.log("d", d);
+  return Object.assign(a, b, c, d);
+  // // console.log(Metadata)
+
+  // let objectT = {};
+  // "General" in Metadata ? compoundUserMetadataGeneral(Metadata.General[0]):null;
+  // // console.log(Metadata.General[0])
+  // // console.log(Metadata.Customer[0])
+  // // console.log(Metadata.Customer[0].Print[0])
+  // // console.log(Metadata.Customer[0].Web[0])
+  // console.log(objectT)
+  // return Object.assign(
+  //   compoundUserMetadataGeneral(Metadata.General[0]),
+  //   compoundUserMetadataCustomer(Metadata.Customer[0]),
+  //   compoundUserMetadataCustomerPrint(Metadata.Customer[0].Print[0]),
+  //   compoundUserMetadataCustomerWeb(Metadata.Customer[0].Web[0])
+  // );
 };
 
 const extractArt = doc => {
-  console.log(doc)
+  let horodate = {};
+  // console.log("DOC", doc);
+  if (!doc) return "fail";
+  if (!doc.doc) return "fail";
+  // console.log("DOCUMENT", doc);
   let metadataExtract =
     "dbMetadata" in doc ? docDbMetadata(doc.dbMetadata[0]) : {};
   let compoundUserMetadata =
@@ -206,8 +257,11 @@ const extractArt = doc => {
       ? compoundUserMetadataExtract(
           doc.dbMetadata[0].compoundUserMetadata[0].Metadata[0]
         )
-      : compoundUserMetadataExtract();
-  return Object.assign(metadataExtract, compoundUserMetadata);
+      : {};
+  horodate.datedExport = doc.datedExport;
+  horodate.heureExport = doc.heureExport;
+
+  return Object.assign(horodate, metadataExtract, compoundUserMetadata);
 };
 
 module.exports = {

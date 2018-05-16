@@ -11,11 +11,12 @@ const date = require("../converteur/date");
  * @description genere un nom de fichier horaodaté
  * @return {string} fileName horodaté
  */
-const csvNameFile = () => {
+const csvNameFile = (type, date) => {
+  console.log(date)
   const exportNameCsv = "export_csv_";
-  const horodatage = date.DateNowFile();
+  const horodatage = date;
   const extentionCsv = ".csv";
-  return exportNameCsv + horodatage + extentionCsv;
+  return exportNameCsv + horodatage +"_"+  type +  extentionCsv;
 };
 
 /**
@@ -25,7 +26,7 @@ const csvNameFile = () => {
  * @param {string} data Données
  * @return {promise}
  */
-const writeFile = (uriFile, data) => {
+const writeFile = (uriFile, data, ) => {
   return new Promise((resolve, reject) => {
     fs.writeFile(uriFile, data, err => {
       if (err) reject(err);
@@ -40,9 +41,9 @@ const writeFile = (uriFile, data) => {
  * @param {string} csv csv data
  * @return {promise}
  */
-const writeFileCSV = csv => {
+const writeFileCSV = (csv,type, date) => {
   return new Promise((resolve, reject) => {
-    writeFile(csvNameFile(), csv)
+    writeFile(csvNameFile(type, date), csv)
       .then(file => {
         resolve(file);
       })
