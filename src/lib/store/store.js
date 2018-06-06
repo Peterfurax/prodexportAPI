@@ -67,7 +67,7 @@ const storeData = (datedExport, heureExport, id, docList) => {
     if (fileTypeTest(val.$.href) === "JPEG") objResult.files.graph.push(val);
     if (fileTypeTest(val.$.href) === "XML") objResult.files.doc.push(val);
     if (fileTypeTest(val.$.href) === "INCONNU") {
-      console.log("ERRRRRRRRRRRRRRRRRRRRRRRORRRRRRRRRRRRRRRRR INPORT ");
+      console.log("ERR IMPORT extension non reconnue");
       return;
     }
 

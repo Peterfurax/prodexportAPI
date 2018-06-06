@@ -17,13 +17,13 @@ const stats = require("../store/stats");
  */
 const router = express.Router();
 function capturePut(req, res) {
-  console.log(req.params.per);
+  // console.log(req.params.per);
   // res.json(req.params);
 }
 // TEST
 
 router.route("/perma:per").get((req, res) => {
-  console.log("cici");
+  // console.log("cici");
   capturePut(req, res);
 });
 

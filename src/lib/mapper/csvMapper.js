@@ -29,7 +29,7 @@ const lanceConvert = data => {
  * @return {object}
  */
 const MAPPING_TO_CSV = () => {
-  console.log("MAPPING_TO_CSV");
+  // console.log("MAPPING_TO_CSV");
   return new Promise((resolve, reject) => {
     let doc = [];
     let graphs = [];
@@ -71,7 +71,7 @@ const MAPPING_TO_CSV = () => {
       graphsTrait = photo.extractPho(graphs);
     });
     Promise.all([lanceConvert(doc), lanceConvert(graphsTrait)])
-      .then(val => resolve(val))
+      .then((val) => resolve(val))
       .catch(err => reject(err));
   });
 };

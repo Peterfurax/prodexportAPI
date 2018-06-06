@@ -12,7 +12,7 @@ const date = require("../converteur/date");
  * @return {string} fileName horodaté
  */
 const csvNameFile = (type, date) => {
-  console.log(date)
+  // console.log(date)
   const exportNameCsv = "export_csv_";
   const horodatage = date;
   const extentionCsv = ".csv";
